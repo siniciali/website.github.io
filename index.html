@@ -6,59 +6,22 @@
     <title>Bruno Raphaël Siniciali — Neurotech × Medicine, EPFL</title>
     <meta
       name="description"
-      content="Bruno Raphaël Siniciali — EPFL Life Sciences Engineering student and Laidlaw Scholar building toward neurosurgery and neurotechnology. Sense-of-agency research at EPFL's LNCO, rehabilitation robotics in Singapore, quadrilingual, Budapest to Lausanne to Stockholm."
+      content="Bruno Raphaël Siniciali — EPFL Life Sciences Engineering student and Laidlaw Scholar building toward neurosurgery and neurotechnology. Sense-of-agency research at EPFL's LNCO, rehabilitation robotics in Singapore."
     />
     <link rel="icon" type="image/png" href="assets/favicon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Unbounded:wght@600;700;800;900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=IBM+Plex+Mono:wght@400;500&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="assets/style.css" />
-    <style>
-      .nav-toggle {
-        display: none;
-        background: none;
-        border: 2px solid var(--ink);
-        color: var(--ink);
-        font-family: "IBM Plex Mono", monospace;
-        font-size: 0.9rem;
-        padding: 0.4rem 0.7rem;
-        cursor: pointer;
-      }
-      @media (max-width: 880px) {
-        .nav-toggle {
-          display: block;
-        }
-        .site-nav ul {
-          display: none;
-          position: absolute;
-          top: 100%;
-          left: 0;
-          right: 0;
-          flex-direction: column;
-          gap: 0;
-          background: var(--beige-light);
-          border-bottom: 3px solid var(--ink);
-          padding: 0.5rem 4vw 1rem;
-        }
-        .site-nav ul.open {
-          display: flex;
-        }
-        .site-nav ul a {
-          display: block;
-          padding: 0.85rem 0;
-          border-bottom: 1px solid var(--line);
-        }
-      }
-    </style>
   </head>
   <body>
     <nav class="site-nav">
       <a class="nav-mark" href="#top">
         <img class="nav-bear" src="assets/bear-logo.png" alt="" />
-        SINICIALI</a
+        Siniciali</a
       >
       <button
         class="nav-toggle"
@@ -74,640 +37,717 @@
         <li><a href="#research">Research</a></li>
         <li><a href="#education">Education</a></li>
         <li><a href="#experience">Experience</a></li>
-        <li><a href="blog.html">Blog</a></li>
+        <li><a href="blog.html">Writing</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
 
-    <header class="masthead" id="top">
-      <p class="eyebrow">
-        46.5197°N 6.5657°E — EPFL, LAUSANNE · BUDAPEST · SINGAPORE ·
-        STOCKHOLM
-      </p>
-      <h1 class="masthead-name">
-        Bruno Raphaël<br />Siniciali<span class="thin"
-          >neurotech&nbsp;×&nbsp;medicine</span
-        >
-      </h1>
-      <div class="masthead-grid">
-        <div>
-          <p class="masthead-sub">
-            Life Sciences Engineering student at EPFL, somewhere between two
-            paths I love — medicine and neuroscience — and slowly figuring
-            out that the answer might just be both.
-          </p>
-          <blockquote class="masthead-quote">
-            “What is left over if I subtract the fact that my arm goes up
-            from the fact that I raise my arm?”
-            <cite>Ludwig Wittgenstein — epigraph of my LNCO research report</cite>
-          </blockquote>
-          <div class="masthead-cta">
-            <a class="btn btn-solid" href="#research">View my work</a>
-            <a class="btn btn-line" href="blog.html">Read the blog</a>
-            <a class="btn btn-line" href="#contact">Get in touch</a>
-          </div>
-        </div>
+    <header class="hero" id="top">
+      <svg
+        class="isobars"
+        viewBox="0 0 900 600"
+        preserveAspectRatio="xMidYMid slice"
+        aria-hidden="true"
+      >
+        <defs>
+          <path
+            id="iso-a"
+            d="M450 120c165 0 300 105 300 235S615 590 450 590 150 485 150 355 285 120 450 120Z"
+          />
+        </defs>
+        <g fill="none" stroke="currentColor" stroke-width="1.1">
+          <use href="#iso-a" transform="translate(450 355) scale(1.18) translate(-450 -355)" />
+          <use href="#iso-a" transform="translate(450 355) rotate(-3) scale(1) translate(-450 -355)" />
+          <use href="#iso-a" transform="translate(450 355) rotate(-6) scale(.83) translate(-450 -355)" />
+          <use href="#iso-a" transform="translate(450 355) rotate(-9) scale(.66) translate(-450 -355)" />
+          <use href="#iso-a" transform="translate(450 355) rotate(-12) scale(.49) translate(-450 -355)" />
+          <use href="#iso-a" transform="translate(450 355) rotate(-15) scale(.32) translate(-450 -355)" />
+          <use href="#iso-a" transform="translate(450 355) rotate(-18) scale(.17) translate(-450 -355)" />
+        </g>
+      </svg>
 
-        <nav class="legend reveal" aria-label="Site colour key">
-          <a class="legend-item" data-c="yellow" href="#research">
-            <svg class="legend-shape" viewBox="0 0 44 44" aria-hidden="true">
-              <polygon points="22,4 40,38 4,38" fill="#bd8b12" />
-            </svg>
-            <span class="legend-text">
-              <span class="legend-label">Yellow · Triangle</span>
-              <h4>Research — the spark</h4>
-            </span>
-          </a>
-          <a class="legend-item" data-c="red" href="#education">
-            <svg class="legend-shape" viewBox="0 0 44 44" aria-hidden="true">
-              <rect x="5" y="5" width="34" height="34" fill="#832a2a" />
-            </svg>
-            <span class="legend-text">
-              <span class="legend-label">Red · Square</span>
-              <h4>Education — the foundation</h4>
-            </span>
-          </a>
-          <a class="legend-item" data-c="blue" href="#experience">
-            <svg class="legend-shape" viewBox="0 0 44 44" aria-hidden="true">
-              <circle cx="22" cy="22" r="17" fill="#1f4770" />
-            </svg>
-            <span class="legend-text">
-              <span class="legend-label">Blue · Circle</span>
-              <h4>Experience — the practice</h4>
-            </span>
-          </a>
-        </nav>
+      <div class="container">
+        <div class="hero-inner">
+          <div class="hero-copy">
+            <p class="eyebrow origins rise d1">
+              <span>45.9411°N 13.6222°E · Gorizia</span>
+              <span>46.1300°N 23.5400°E · Celna</span>
+            </p>
+            <h1 class="hero-name rise d2">Bruno Raphaël<br />Siniciali</h1>
+            <p class="hero-tag rise d3">
+              Neurotech <span>×</span> Medicine
+            </p>
+            <p class="lead rise d3">
+              Life Sciences Engineering at EPFL, somewhere between two paths I
+              love — medicine and neuroscience — and slowly figuring out that
+              the answer might just be both.
+            </p>
+            <div class="actions rise d4">
+              <a class="btn btn-solid" href="#research">See the work</a>
+              <a class="btn btn-line" href="#contact">Get in touch</a>
+            </div>
+          </div>
+          <figure class="hero-art rise d2">
+            <span class="hero-disc"></span>
+            <img src="assets/bear-logo.png" alt="" />
+          </figure>
+        </div>
+        <div class="spectrum rise d4" aria-hidden="true">
+          <span></span><span></span><span></span><span></span>
+        </div>
       </div>
     </header>
 
-    <section id="manifesto" style="padding-top: 1rem">
-      <div class="sec-head reveal">
-        <span class="sec-index">FIG. 01</span>
-        <h2>A Note on Colour</h2>
-        <div class="sec-rule"></div>
+    <section class="section" id="about">
+      <div class="container">
+        <div class="sec-head reveal">
+          <span class="sec-bar"></span>
+          <span class="eyebrow">About</span>
+          <h2>Building toward neurosurgery and neurotechnology.</h2>
+        </div>
+        <div class="about-grid">
+          <div class="prose reveal">
+            <p>
+              I meant to become an anthropologist. Human imagination and
+              intelligence fascinated me, so I went looking for them in
+              politics and then in psychology — and ran into the same
+              dissatisfaction each time. Those fields study human
+              relationships beautifully, but personality is contingent and
+              culture-dependent, and I wanted something underneath that: a
+              general model of how the brain actually works. That is what
+              pointed me at neuroscience.
+            </p>
+            <p>
+              Medicine arrived from the other direction. During a hematology
+              internship at Semmelweis University Hospital in Budapest, I got
+              my first real look at a clinic from the inside, and left
+              convinced there was still so much to unlock — in how diseases
+              are detected, and in how the brain could be interfaced with
+              technology. That conviction is why I chose life sciences
+              engineering over medical school: I wanted to understand both
+              worlds deeply enough to help bridge them.
+            </p>
+            <p>
+              The question I keep coming back to is what shapes the way humans
+              think, decide, and change. It has taken me from EPFL's
+              Laboratory of Cognitive Neuroscience, to neurotech at Roceso
+              Technologies in Singapore, and on to a medical-engineering
+              exchange at KTH Stockholm and the Karolinska Institute. Memory
+              is not an abstract interest here: several people in my family
+              live with dementia, each of them differently, and work on
+              stimulation, agency and spatial memory is the closest thing I
+              have found to a way in.
+            </p>
+            <p>
+              I want to operate on the brain and build the things that extend
+              what surgery can do — not as competing ambitions, but as one
+              coherent one. The kind of goal that takes twenty years and looks
+              slightly unreasonable from the outside, which is usually a good
+              sign.
+            </p>
+          </div>
+          <aside class="spec reveal">
+            <dl>
+              <div>
+                <dt>Programme</dt>
+                <dd>BSc Life Sciences Engineering, EPFL — 5.3/6</dd>
+              </div>
+              <div>
+                <dt>Scholarship</dt>
+                <dd>Laidlaw Scholar, 2025 cohort</dd>
+              </div>
+              <div>
+                <dt>Exchange</dt>
+                <dd>KTH Stockholm &amp; Karolinska Institute</dd>
+              </div>
+              <div>
+                <dt>Currently</dt>
+                <dd>Roceso Technologies, Singapore</dd>
+              </div>
+              <div>
+                <dt>Languages</dt>
+                <dd>French · English · German · Hungarian</dd>
+              </div>
+            </dl>
+          </aside>
+        </div>
       </div>
-      <div class="about-grid">
+    </section>
+
+    <section class="section research" id="research">
+      <div class="container">
+        <div class="sec-head reveal">
+          <span class="sec-bar"></span>
+          <span class="eyebrow"><span class="glyph glyph-tri"></span>Research &amp; Projects</span>
+          <h2>Where the hypothesis meets the build.</h2>
+        </div>
+        <div class="work-grid reveal">
+          <article class="card">
+            <h3>Sense of Agency &amp; Episodic Memory</h3>
+            <p>
+              Laidlaw research internship at EPFL's Laboratory of Cognitive
+              Neuroscience. I built an online experimental application testing
+              whether the sense of agency — the feeling of controlling one's
+              actions — strengthens episodic memory, and added confidence
+              ratings to the recognition protocol.
+            </p>
+            <a
+              class="card-link"
+              href="https://laidlawscholars.network/documents/investigating_the_relationship_between_episodic_memory_and_sense_of_agency-67e57e47-ae0f-4714-a5b5-b469a358a357"
+              target="_blank"
+              rel="noopener"
+              >Research report</a
+            >
+          </article>
+          <article class="card">
+            <h3>Neurorehabilitation Robotics</h3>
+            <p>
+              R&amp;D and clinical-operations internship at Roceso
+              Technologies, Singapore — developing rehabilitation concepts for
+              a hand-tracking device paired with a soft-robotic glove,
+              grounded in agency–memory neuroscience, to help stroke patients
+              recover.
+            </p>
+          </article>
+          <article class="card">
+            <h3>Computer Vision on Psychiatric Art</h3>
+            <p>
+              Led the deconfounding pipeline in a 48-hour clinical-AI pilot
+              applying DINOv2 visual embeddings to 3,054 psychiatric patient
+              artworks from Bern University Hospital — showing text inscription
+              explains ~10× more visual variance than colour or figure
+              content, and surfacing three expressive clusters mapped onto
+              diagnoses.
+            </p>
+          </article>
+          <article class="card">
+            <h3>EPFL Sustainable Innovation Challenge</h3>
+            <p>
+              Challenge Team Leader for Europe's first student-led
+              sustainability forum of its kind. Over 11 months I led the
+              challenge design and the selection of teams and jurors,
+              culminating in an international final at EPFL with finalist
+              teams from Sweden, Poland, the Netherlands and Switzerland.
+            </p>
+            <a class="card-link" href="blog/sustainable-innovation-challenge-2026.html"
+              >Read the recap</a
+            >
+          </article>
+          <article class="card">
+            <h3>Hopfield Networks &amp; Learning Rules</h3>
+            <p>
+              An empirical study of Hopfield networks as associative memory —
+              comparing Hebbian and Storkey learning rules, storage capacity
+              and robustness to noise. Awarded top recognition in EPFL's
+              BIO-210 programming competition, a team of three among ~180
+              participants.
+            </p>
+          </article>
+          <article class="card">
+            <h3>Population Simulation in C++</h3>
+            <p>
+              A dynamic ecosystem simulation in C++ with SFML: animals and
+              plants in a 2D toroidal world with reproduction, predation,
+              gestation and perception — built with polymorphism, inheritance
+              and design patterns.
+            </p>
+            <a
+              class="card-link"
+              href="https://github.com/siniciali/scorpio-lizard-population-simulation"
+              target="_blank"
+              rel="noopener"
+              >View on GitHub</a
+            >
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="statement">
+      <div class="container">
+        <blockquote class="reveal">
+          “What is left over if I subtract the fact that my arm goes up from
+          the fact that I raise my arm?”
+          <cite>Ludwig Wittgenstein — epigraph of my LNCO research report</cite>
+        </blockquote>
+      </div>
+    </section>
+
+    <section class="section education" id="education">
+      <div class="container">
+        <div class="sec-head reveal">
+          <span class="sec-bar"></span>
+          <span class="eyebrow"><span class="glyph"></span>Education</span>
+          <h2>The foundation, poured one course at a time.</h2>
+        </div>
+        <div class="edu-grid">
+          <div class="edu reveal">
+            <span class="when">2024 — 2027</span>
+            <h3>BSc Life Sciences Engineering</h3>
+            <p>
+              École Polytechnique Fédérale de Lausanne. Grade 5.3/6.
+              Coursework spanning cell &amp; molecular biology, biochemistry,
+              signal processing, numerical analysis, machine learning and
+              biostatistics.
+            </p>
+          </div>
+          <div class="edu reveal">
+            <span class="when">2026 — 2027</span>
+            <h3>Exchange — KTH &amp; Karolinska Institute</h3>
+            <p>
+              Full-year exchange in Stockholm focused on medical engineering,
+              machine learning for health, neuroscience and biomedical signal
+              processing.
+            </p>
+          </div>
+          <div class="edu reveal">
+            <span class="when">2025 — 2026</span>
+            <h3>Oxford Character Project</h3>
+            <p>
+              Ethical-leadership programme delivered by the University of
+              Oxford as part of the Laidlaw Scholarship, developing ethical,
+              self-aware and values-driven leadership through reflective
+              practice.
+            </p>
+          </div>
+          <div class="edu reveal">
+            <span class="when">2018 — 2024</span>
+            <h3>Baccalauréat — Lycée Gustave Eiffel, Budapest</h3>
+            <p>
+              Valedictorian with highest honours, 19.24/20, mention très bien
+              avec les félicitations du jury. Student-council representative
+              and eco-delegate; two years of MATh.en.JEANS research.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section experience" id="experience">
+      <div class="container">
+        <div class="sec-head reveal">
+          <span class="sec-bar"></span>
+          <span class="eyebrow"><span class="glyph glyph-circle"></span>Experience</span>
+          <h2>The practice — returning to the same problem until it becomes second nature.</h2>
+        </div>
+        <div class="timeline">
+          <div class="t-item reveal">
+            <span class="when">Jul 2026 — present · Singapore</span>
+            <h3>R&amp;D &amp; Clinical Operations Intern</h3>
+            <p class="t-org">Roceso Technologies — Laidlaw Leadership-in-Action</p>
+            <p>
+              Six-week Leadership-in-Action internship in neurorehabilitation
+              robotics, translating cognitive-neuroscience findings into
+              rehabilitation tools for soft-robotic hand-therapy devices.
+            </p>
+          </div>
+          <div class="t-item reveal">
+            <span class="when">Apr 2025 — present · Lausanne</span>
+            <h3>Challenge Team Leader</h3>
+            <p class="t-org">EPFL Sustainable Innovation Challenge</p>
+            <p>
+              Led the design of the challenge and the selection of both
+              participating teams and jurors for Europe's first student-led
+              sustainability forum of its kind, uniting students, researchers
+              and industry leaders for an international final at EPFL.
+            </p>
+            <a class="card-link" href="blog/sustainable-innovation-challenge-2026.html"
+              >Read the recap</a
+            >
+          </div>
+          <div class="t-item reveal">
+            <span class="when">Jul — Sep 2025 · Geneva</span>
+            <h3>Research Intern — Laboratory of Cognitive Neuroscience</h3>
+            <p class="t-org">LNCO, Neuro-X Institute, EPFL — Laidlaw Scholar</p>
+            <p>
+              Eight-week full-time research internship on the EPFL Biotech
+              Campus, investigating the links between the sense of agency and
+              episodic memory. Designed, programmed and deployed an online
+              experimental platform for large-scale data collection.
+            </p>
+            <a
+              class="card-link"
+              href="https://laidlawscholars.network/documents/investigating_the_relationship_between_episodic_memory_and_sense_of_agency-67e57e47-ae0f-4714-a5b5-b469a358a357"
+              target="_blank"
+              rel="noopener"
+              >Research report</a
+            >
+          </div>
+          <div class="t-item reveal">
+            <span class="when">Feb — Jul 2026 · Lausanne</span>
+            <h3>Teaching Assistant — Bio-organic Chemistry</h3>
+            <p class="t-org">EPFL, BIO-110</p>
+            <p>
+              Teaching assistant for Prof. Bruno Correia's course: weekly
+              exercise sessions, exercise sheets and revision lectures, and a
+              final lecture on amino-acid structure, sequencing and peptide
+              synthesis designed from scratch.
+            </p>
+          </div>
+          <div class="t-item reveal">
+            <span class="when">Feb 2025 — Jul 2026 · Lausanne</span>
+            <h3>Student Representative</h3>
+            <p class="t-org">EPFL — Life Sciences Engineering</p>
+            <p>
+              Elected representative for the first- and second-year cohorts,
+              around 340 students, channelling peer feedback into tangible
+              changes in course organisation and student support.
+            </p>
+          </div>
+          <div class="t-item reveal">
+            <span class="when">Oct 2023 · Budapest</span>
+            <h3>Hematology Intern</h3>
+            <p class="t-org">Semmelweis University Hospital</p>
+            <p>
+              Clinical internship in the Hematology Department under Prof.
+              Péter Farkas — an early, formative encounter with the human side
+              of medicine.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section recognition">
+      <div class="container">
+        <div class="sec-head reveal">
+          <span class="sec-bar"></span>
+          <span class="eyebrow">Recognition &amp; Involvement</span>
+        </div>
+        <div class="rec-grid">
+          <div class="reveal">
+            <h3>Honours</h3>
+            <ul class="rows">
+              <li>
+                <b>BIO-210 Programming Competition — top recognition</b>
+                <span class="meta">EPFL · Dec 2025</span>
+                <p>
+                  Team of three selected among ~180 participants; distinguished
+                  for computational efficiency, testing and documentation.
+                </p>
+              </li>
+              <li>
+                <b>Baccalauréat — félicitations du jury</b>
+                <span class="meta">Académie de Strasbourg · Jun 2024</span>
+                <p>Overall average 19.24/20, high-school valedictorian.</p>
+              </li>
+              <li>
+                <b>National Geosciences Olympiad of AEFE — 3rd place</b>
+                <span class="meta">AEFE · Sep 2023</span>
+              </li>
+            </ul>
+          </div>
+          <div class="reveal">
+            <h3>Leadership</h3>
+            <ul class="rows">
+              <li>
+                <b>Faculty Representative</b>
+                <span class="meta">AESV, EPFL · Oct 2025 — present</span>
+                <p>Member of the Commission of Student Section Representatives.</p>
+              </li>
+              <li>
+                <b>Student Body Representative</b>
+                <span class="meta">AGEPoly · Sep 2025 — Jan 2026</span>
+                <p>
+                  Human and Social Sciences Courses Teaching Commission.
+                </p>
+              </li>
+              <li>
+                <b>Student Integration Coach</b>
+                <span class="meta">Coaching EPFL · Aug 2025 — present</span>
+              </li>
+              <li>
+                <b>Earthquake relief fundraiser</b>
+                <span class="meta">Lycée Gustave Eiffel, Budapest · 2023</span>
+                <p>
+                  Initiated and organised a school-wide collection for victims
+                  of the 2023 Turkey earthquake, after a classmate was directly
+                  affected.
+                </p>
+              </li>
+              <li>
+                <b>High School Governing Board Representative</b>
+                <span class="meta">Lycée Gustave Eiffel, Budapest · 2022 — 2024</span>
+                <p>
+                  Governing Board and Conseil de Vie Lycéenne; eco-delegate on
+                  the Sustainable Development Committee.
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section writing">
+      <div class="container">
+        <div class="sec-head reveal">
+          <span class="sec-bar"></span>
+          <span class="eyebrow">Writing</span>
+          <h2>Notes from the lab, the clinic and everywhere in between.</h2>
+        </div>
+        <div class="writing-grid reveal">
+          <a class="post-card" href="blog/choosing-life-sciences-engineering.html">
+            <span class="when">July 2026 · Singapore</span>
+            <h3>Why I Chose Engineering Over Medical School</h3>
+            <p>
+              On the hematology ward in Budapest that convinced me the answer
+              wasn't medicine or engineering — it was both.
+            </p>
+            <span class="more">Read</span>
+          </a>
+          <a class="post-card" href="blog/sustainable-innovation-challenge-2026.html">
+            <span class="when">May 2026 · Lausanne</span>
+            <h3>Leading the EPFL Sustainable Innovation Challenge</h3>
+            <p>
+              Eleven months of building a challenge from scratch, eight
+              finalist teams, and what I learned about the gaps that let ideas
+              scale.
+            </p>
+            <span class="more">Read</span>
+          </a>
+          <a class="post-card" href="blog/sense-of-agency-episodic-memory.html">
+            <span class="when">September 2025 · Geneva</span>
+            <h3>Investigating Sense of Agency &amp; Episodic Memory</h3>
+            <p>
+              Inside my Laidlaw summer at EPFL's LNCO: building an online
+              experiment, wrestling with AI-assisted coding, and what the data
+              is starting to show.
+            </p>
+            <span class="more">Read</span>
+          </a>
+        </div>
+        <div class="actions reveal">
+          <a class="btn btn-line" href="blog.html">All writing</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section lineage" id="lineage">
+      <svg
+        class="isobars"
+        viewBox="0 0 900 600"
+        preserveAspectRatio="xMidYMid slice"
+        aria-hidden="true"
+      >
+        <defs>
+          <path
+            id="iso-b"
+            d="M450 120c165 0 300 105 300 235S615 590 450 590 150 485 150 355 285 120 450 120Z"
+          />
+        </defs>
+        <g fill="none" stroke="currentColor" stroke-width="1.1">
+          <use href="#iso-b" transform="translate(450 300) scale(1.25) translate(-450 -355)" />
+          <use href="#iso-b" transform="translate(450 300) rotate(4) scale(1.05) translate(-450 -355)" />
+          <use href="#iso-b" transform="translate(450 300) rotate(8) scale(.86) translate(-450 -355)" />
+          <use href="#iso-b" transform="translate(450 300) rotate(12) scale(.67) translate(-450 -355)" />
+          <use href="#iso-b" transform="translate(450 300) rotate(16) scale(.48) translate(-450 -355)" />
+          <use href="#iso-b" transform="translate(450 300) rotate(20) scale(.29) translate(-450 -355)" />
+        </g>
+      </svg>
+
+      <div class="container">
+        <div class="sec-head reveal">
+          <span class="sec-bar"></span>
+          <span class="eyebrow">Colophon — on the design</span>
+          <h2>Why a scientist builds a website like an architect.</h2>
+        </div>
+
+        <div class="lineage-grid">
+          <div class="prose reveal">
+            <p>
+              My work is scientific, but design considerations shaped a great
+              deal of how I think and how I approach science — what to make
+              visible, what to leave out, how structure carries an argument
+              before a single word is read. So I wanted this site built with
+              those considerations in mind rather than assembled from a
+              template.
+            </p>
+            <p>
+              That instinct is inherited. <strong>Kévés György</strong>, my
+              grandmother's second husband and an architect, was the first
+              person who made me want to design things at all — for a long
+              time he was the reason I intended to become an architect. My
+              grandfather <strong>Czelnai Rudolf</strong>, a meteorologist,
+              taught me to read the world as systems: pressure fields,
+              evolutionary branches, the habit of drawing a phenomenon before
+              claiming to understand it. The contour lines behind this section
+              and the branching diagram below come directly from that.
+            </p>
+          </div>
+          <div class="prose reveal">
+            <p>
+              My father <strong>Serge Siniciali</strong> works in hydraulic
+              energy — flow, pressure, the engineering of moving water. My
+              mother <strong>Czelnai Éva</strong> worked as a journalist and
+              an interpreter, which is where the languages and the conviction
+              that an idea only counts once it is understood by someone else
+              both come from.
+            </p>
+            <p>
+              The palette holds the two places I come from. Ochre, terracotta
+              and Adriatic blue are the colours of <strong>Gorizia</strong> and
+              the Friuli — my Italian roots, and the region of the Italian
+              rationalists who ran the Bauhaus argument in their own accent.
+              The green and the stone-beige belong to
+              <strong>Celna</strong>, in Transylvania, the village the Czelnai
+              name comes from. The shapes are Johannes Itten's Bauhaus
+              grammar: triangle, square, circle — assigned here, once, and
+              then used consistently.
+            </p>
+          </div>
+        </div>
+
+        <div class="swatches reveal">
+          <div class="swatch">
+            <div class="chip" style="background: var(--gold)">
+              <svg viewBox="0 0 60 60" aria-hidden="true">
+                <polygon points="30,14 48,46 12,46" fill="var(--paper)" />
+              </svg>
+            </div>
+            <span class="name">Ochre · Triangle</span>
+            <b>Research</b>
+            <p>Itten's triangle, the sharpest shape. Also Friuli in autumn.</p>
+          </div>
+          <div class="swatch">
+            <div class="chip" style="background: var(--red)">
+              <svg viewBox="0 0 60 60" aria-hidden="true">
+                <rect x="14" y="14" width="32" height="32" fill="var(--paper)" />
+              </svg>
+            </div>
+            <span class="name">Terracotta · Square</span>
+            <b>Education</b>
+            <p>Weight and material — the brick of northern Italian building.</p>
+          </div>
+          <div class="swatch">
+            <div class="chip" style="background: var(--blue)">
+              <svg viewBox="0 0 60 60" aria-hidden="true">
+                <circle cx="30" cy="30" r="17" fill="var(--paper)" />
+              </svg>
+            </div>
+            <span class="name">Adriatic · Circle</span>
+            <b>Experience</b>
+            <p>Motion without end; the sea an hour south of Gorizia.</p>
+          </div>
+          <div class="swatch">
+            <div class="chip" style="background: var(--green)">
+              <svg viewBox="0 0 60 60" aria-hidden="true">
+                <rect x="12" y="27" width="36" height="6" fill="var(--paper)" />
+              </svg>
+            </div>
+            <span class="name">Alpine · Ground</span>
+            <b>The through-line</b>
+            <p>Transylvanian hills and the Alps on both sides of the family.</p>
+          </div>
+          <div class="swatch">
+            <div class="chip" style="background: var(--paper-3)">
+              <svg viewBox="0 0 60 60" aria-hidden="true">
+                <rect
+                  x="13"
+                  y="13"
+                  width="34"
+                  height="34"
+                  fill="none"
+                  stroke="var(--ink)"
+                  stroke-width="2"
+                />
+              </svg>
+            </div>
+            <span class="name">Stone · Ground</span>
+            <b>The paper</b>
+            <p>Istrian stone, and the drawing sheet everything is set on.</p>
+          </div>
+        </div>
+
+        <div class="tree-wrap reveal">
+          <svg class="tree" viewBox="0 0 1100 400" role="img"
+            aria-label="Branching diagram of influences converging into research, education and experience">
+            <g>
+              <line x1="342" y1="40" x2="500" y2="40" />
+              <line x1="342" y1="104" x2="500" y2="104" />
+              <line x1="342" y1="168" x2="500" y2="168" />
+              <line x1="342" y1="232" x2="500" y2="232" />
+              <line x1="342" y1="296" x2="500" y2="296" />
+              <line x1="342" y1="360" x2="500" y2="360" />
+              <line x1="500" y1="40" x2="500" y2="360" />
+              <line x1="500" y1="200" x2="725" y2="200" />
+              <line x1="725" y1="104" x2="725" y2="296" />
+              <line x1="725" y1="104" x2="805" y2="104" />
+              <line x1="725" y1="200" x2="805" y2="200" />
+              <line x1="725" y1="296" x2="805" y2="296" />
+            </g>
+            <g text-anchor="end" dominant-baseline="middle">
+              <text class="node" x="330" y="40">Gorizia · Friuli</text>
+              <text class="node" x="330" y="104">Celna · Transylvania</text>
+              <text class="node" x="330" y="168">Kévés György · architecture</text>
+              <text class="node" x="330" y="232">Czelnai Rudolf · meteorology</text>
+              <text class="node" x="330" y="296">Serge Siniciali · hydraulics</text>
+              <text class="node" x="330" y="360">Czelnai Éva · language</text>
+            </g>
+            <g aria-hidden="true">
+              <polygon points="838,90 854,118 822,118" fill="#b0821f" />
+              <rect x="824" y="187" width="28" height="28" fill="#8b2e27" />
+              <circle cx="838" cy="296" r="14" fill="#1b3f63" />
+            </g>
+            <g dominant-baseline="middle">
+              <text class="node" x="872" y="104">Research</text>
+              <text class="node" x="872" y="200">Education</text>
+              <text class="node" x="872" y="296">Experience</text>
+            </g>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact" id="contact">
+      <div class="container">
+        <div class="sec-head reveal">
+          <span class="sec-bar"></span>
+          <span class="eyebrow">Contact</span>
+          <h2>
+            Open to conversations about neuroscience, rehabilitation
+            technology and research collaborations.
+          </h2>
+        </div>
         <div class="reveal">
-          <p>
-            Long before software had a design system, the Bauhaus had one. In
-            Johannes Itten's preliminary course, every student learned that a
-            triangle is yellow, a square is red, a circle is blue — not as
-            decoration, but as a claim that form and colour carry meaning on
-            their own, before a single word is added. Kassák Lajos ran the
-            same argument through Vienna and Budapest with his journal
-            <em>MA</em>. Farkas Molnár carried it into Hungarian
-            architecture. Marcel Breuer, another Hungarian, carried it into
-            furniture and then into buildings.
-          </p>
-          <p>
-            I grew up on the Hungarian side of that lineage, and I'm building
-            an engineering career on the Swiss side of it — in the city
-            where Le Corbusier once tried to reduce architecture to
-            proportion and number. So this site borrows their alphabet.
-            Yellow is the triangle: the sharpest shape for the sharpest
-            moment, research, the instant a hypothesis clicks into place.
-            Red is the square: weight and material, education, a foundation
-            poured one course at a time. Blue is the circle: motion without
-            end, experience, the discipline of returning to the same problem
-            until it becomes second nature. Green is the ground everything
-            else grows out of, and beige is the paper it's all written on.
-          </p>
-        </div>
-        <aside class="fact-card reveal">
-          <h3>At a glance</h3>
-          <ul>
-            <li>BSc Life Sciences Engineering, EPFL — 5.3/6</li>
-            <li>Laidlaw Scholar — 2025 cohort</li>
-            <li>Exchange: KTH Stockholm & Karolinska Institute</li>
-            <li>Currently in Singapore — Roceso Technologies</li>
-            <li>Quadrilingual: French, English, German, Hungarian</li>
-            <li>Baccalauréat valedictorian — 19.24/20</li>
-          </ul>
-        </aside>
-      </div>
-    </section>
-
-    <section id="about" style="padding-top: 0">
-      <div class="sec-head reveal">
-        <span class="sec-index">FIG. 02</span>
-        <h2>About</h2>
-        <div class="sec-rule"></div>
-      </div>
-      <div class="about-grid" style="grid-template-columns: 1fr">
-        <div class="reveal">
-          <p>
-            I'm a Life Sciences Engineering student at EPFL, somewhere between
-            two paths I love — medicine and neuroscience — and slowly figuring
-            out that the answer might just be both.
-          </p>
-          <p>
-            It started before EPFL. During a hematology internship at
-            Semmelweis University Hospital in Budapest, I got my first real
-            look at medicine from the inside, and left convinced that there
-            was still so much to unlock — in how diseases are detected, and
-            how the brain itself could be interfaced with technology. That
-            conviction is what led me to life sciences engineering rather than
-            directly to medical school: I wanted to understand both worlds
-            deeply enough to help bridge them.
-          </p>
-          <p>
-            The question I keep coming back to is what actually shapes the way
-            humans think, decide, and change. It has taken me from cognitive
-            neuroscience research at EPFL's Laboratory of Cognitive
-            Neuroscience (LNCO), to neurotech at Roceso Technologies in
-            Singapore, and on to a medical-engineering exchange at KTH
-            Stockholm and the Karolinska Institute — different contexts, same
-            obsession: why the neural mechanisms driving human behaviour
-            evolved the way they did, and how that knowledge can become tools
-            in medicine and mental health.
-          </p>
-          <p>
-            The path I'm building leads toward neurosurgery and
-            neurotechnology. I want to operate on the brain and build things
-            that extend what surgery can do — not as competing ambitions, but
-            as one coherent one. The kind of goal that takes twenty years and
-            looks slightly unreasonable from the outside, which is usually a
-            good sign.
-          </p>
-          <p>
-            Outside the lab, I'm quadrilingual (French, English, German,
-            Hungarian), curious about most things, and especially the ones
-            that don't have clean answers yet.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <div class="chapter chapter-yellow">
-      <p class="eyebrow">Fig. 03 — Yellow · Triangle</p>
-      <h3 class="reveal">The Spark</h3>
-      <p class="reveal">
-        Research & Projects — the instant a hypothesis clicks into place.
-      </p>
-    </div>
-
-    <section id="research">
-      <div class="sec-head reveal">
-        <span class="sec-index">FIG. 03</span>
-        <h2>Research & Projects</h2>
-        <div class="sec-rule"></div>
-      </div>
-      <div class="proj-grid reveal">
-        <article class="proj">
-          <svg class="proj-shape" viewBox="0 0 22 22">
-            <polygon points="11,2 20,20 2,20" fill="#bd8b12" />
-          </svg>
-          <span class="proj-tag">Cognitive Neuroscience</span>
-          <h3>Sense of Agency & Episodic Memory</h3>
-          <p>
-            Laidlaw research internship at EPFL's Laboratory of Cognitive
-            Neuroscience. I built an online experimental application testing
-            whether the sense of agency — the feeling of controlling one's
-            actions — strengthens episodic memory, and added confidence
-            ratings to the recognition protocol.
-          </p>
-          <a
-            class="proj-link"
-            href="https://laidlawscholars.network/documents/investigating_the_relationship_between_episodic_memory_and_sense_of_agency-67e57e47-ae0f-4714-a5b5-b469a358a357"
-            target="_blank"
-            rel="noopener"
-            >Read the research report →</a
+          <a class="big-link" href="mailto:bruno.siniciali@epfl.ch"
+            >bruno.siniciali@epfl.ch</a
           >
-        </article>
-        <article class="proj">
-          <svg class="proj-shape" viewBox="0 0 22 22">
-            <rect x="3" y="3" width="16" height="16" fill="#bd8b12" />
-          </svg>
-          <span class="proj-tag">Rehabilitation Robotics</span>
-          <h3>Neurorehabilitation Robotics</h3>
-          <p>
-            R&D and clinical-operations internship at Roceso Technologies,
-            Singapore — developing rehabilitation concepts for a
-            hand-tracking device paired with a soft-robotic glove, grounded in
-            agency–memory neuroscience, to help stroke patients recover.
-          </p>
-        </article>
-        <article class="proj">
-          <svg class="proj-shape" viewBox="0 0 22 22">
-            <circle cx="11" cy="11" r="9" fill="#bd8b12" />
-          </svg>
-          <span class="proj-tag">Machine Learning</span>
-          <h3>Computer Vision on Psychiatric Art</h3>
-          <p>
-            Led the deconfounding pipeline in a 48-hour clinical-AI pilot
-            applying DINOv2 visual embeddings to 3,054 psychiatric patient
-            artworks from Bern University Hospital — showing text inscription
-            explains ~10× more visual variance than colour or figure content,
-            and surfacing three expressive clusters mapped onto diagnoses.
-          </p>
-        </article>
-        <article class="proj">
-          <svg class="proj-shape" viewBox="0 0 22 22">
-            <polygon
-              points="11,2 20,20 2,20"
-              fill="none"
-              stroke="#bd8b12"
-              stroke-width="2.5"
-            />
-          </svg>
-          <span class="proj-tag">Leadership</span>
-          <h3>EPFL Sustainable Innovation Challenge</h3>
-          <p>
-            Challenge Team Leader for Europe's first student-led
-            sustainability forum of its kind. Over 11 months I led the
-            challenge design and the selection of teams and jurors,
-            culminating in an international final at EPFL with finalist teams
-            from Sweden, Poland, the Netherlands and Switzerland.
-          </p>
-          <a class="proj-link" href="blog/sustainable-innovation-challenge-2026.html"
-            >Read the recap on the blog →</a
-          >
-        </article>
-        <article class="proj">
-          <svg class="proj-shape" viewBox="0 0 22 22">
-            <rect
-              x="3"
-              y="3"
-              width="16"
-              height="16"
-              fill="none"
-              stroke="#bd8b12"
-              stroke-width="2.5"
-            />
-          </svg>
-          <span class="proj-tag">Neural Networks</span>
-          <h3>Hopfield Networks & Learning Rules</h3>
-          <p>
-            An empirical study of Hopfield networks as associative memory —
-            comparing Hebbian and Storkey learning rules, storage capacity and
-            robustness to noise. Awarded top recognition in EPFL's BIO-210
-            programming competition (team of 3 among ~180 participants).
-          </p>
-        </article>
-        <article class="proj">
-          <svg class="proj-shape" viewBox="0 0 22 22">
-            <circle
-              cx="11"
-              cy="11"
-              r="9"
-              fill="none"
-              stroke="#bd8b12"
-              stroke-width="2.5"
-            />
-          </svg>
-          <span class="proj-tag">Software · C++</span>
-          <h3>Population Simulation in C++</h3>
-          <p>
-            A dynamic ecosystem simulation in C++ with SFML: animals and
-            plants in a 2D toroidal world with reproduction, predation,
-            gestation and perception — built with polymorphism, inheritance
-            and design patterns.
-          </p>
-          <a
-            class="proj-link"
-            href="https://github.com/siniciali/scorpio-lizard-population-simulation"
-            target="_blank"
-            rel="noopener"
-            >View on GitHub →</a
-          >
-        </article>
-      </div>
-    </section>
-
-    <div class="chapter chapter-red">
-      <p class="eyebrow">Fig. 04 — Red · Square</p>
-      <h3 class="reveal">The Foundation</h3>
-      <p class="reveal">Education — a foundation poured one course at a time.</p>
-    </div>
-
-    <section id="education">
-      <div class="sec-head reveal">
-        <span class="sec-index">FIG. 04</span>
-        <h2>Education</h2>
-        <div class="sec-rule"></div>
-      </div>
-      <div class="edu-grid">
-        <div class="edu reveal">
-          <span class="t-date">2024 — 2027</span>
-          <h3>BSc Life Sciences Engineering</h3>
-          <p>
-            École Polytechnique Fédérale de Lausanne (EPFL). Grade 5.3/6.
-            Coursework spanning cell & molecular biology, biochemistry, signal
-            processing, numerical analysis, machine learning and
-            biostatistics.
-          </p>
+          <div class="links">
+            <a
+              href="https://www.linkedin.com/in/bruno-rapha%C3%ABl-siniciali/"
+              target="_blank"
+              rel="noopener"
+              >LinkedIn</a
+            >
+            <a href="https://github.com/siniciali" target="_blank" rel="noopener"
+              >GitHub</a
+            >
+            <a
+              href="https://laidlawscholars.network/"
+              target="_blank"
+              rel="noopener"
+              >Laidlaw Scholars Network</a
+            >
+            <a
+              href="https://people.epfl.ch/bruno.siniciali/?lang=en"
+              target="_blank"
+              rel="noopener"
+              >EPFL Directory</a
+            >
+          </div>
         </div>
-        <div class="edu reveal">
-          <span class="t-date">2026 — 2027</span>
-          <h3>Exchange Year — KTH & Karolinska Institute</h3>
-          <p>
-            Full-year academic exchange in Stockholm focused on medical
-            engineering, machine learning for health, neuroscience and
-            biomedical signal processing.
-          </p>
-        </div>
-        <div class="edu reveal">
-          <span class="t-date">2025 — 2026</span>
-          <h3>Oxford Character Project — Ethical Leadership</h3>
-          <p>
-            Leadership programme delivered by the University of Oxford as part
-            of the Laidlaw Scholarship, developing ethical, self-aware and
-            values-driven leadership through reflective practice.
-          </p>
-        </div>
-        <div class="edu reveal">
-          <span class="t-date">2018 — 2024</span>
-          <h3>Baccalauréat Général — Lycée Gustave Eiffel, Budapest</h3>
-          <p>
-            Valedictorian with highest honours (19.24/20), "mention très bien
-            avec les félicitations du jury". Student-council representative
-            and eco-delegate; two years of MATh.en.JEANS mathematical
-            research.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <div class="chapter chapter-blue">
-      <p class="eyebrow">Fig. 05 — Blue · Circle</p>
-      <h3 class="reveal">The Practice</h3>
-      <p class="reveal">
-        Experience — the discipline of returning to the same problem until
-        it becomes second nature.
-      </p>
-    </div>
-
-    <section id="experience">
-      <div class="sec-head reveal">
-        <span class="sec-index">FIG. 05</span>
-        <h2>Experience</h2>
-        <div class="sec-rule"></div>
-      </div>
-      <div class="timeline">
-        <div class="t-item reveal">
-          <span class="t-date">Jul 2026 – present · Singapore</span>
-          <h3>
-            R&D & Clinical Operations Intern — Neurorehabilitation Robotics
-          </h3>
-          <p class="t-org">
-            Roceso Technologies — Laidlaw Leadership-in-Action
-          </p>
-          <p>
-            Six-week Leadership-in-Action internship in neurorehabilitation
-            robotics, translating cognitive-neuroscience findings into
-            rehabilitation tools for soft-robotic hand-therapy devices.
-          </p>
-        </div>
-        <div class="t-item reveal">
-          <span class="t-date">Apr 2025 – present · Lausanne</span>
-          <h3>Challenge Team Leader</h3>
-          <p class="t-org">EPFL Sustainable Innovation Challenge</p>
-          <p>
-            Led the design of the challenge and the selection of both
-            participating teams and jurors for Europe's first student-led
-            sustainability forum of its kind, uniting students, researchers
-            and industry leaders for an international final at EPFL.
-          </p>
-          <a class="proj-link" href="blog/sustainable-innovation-challenge-2026.html"
-            >Read the recap →</a
-          >
-        </div>
-        <div class="t-item reveal">
-          <span class="t-date">Jul – Sep 2025 · Geneva</span>
-          <h3>Research Intern — Laboratory of Cognitive Neuroscience</h3>
-          <p class="t-org">LNCO, Neuro-X Institute, EPFL — Laidlaw Scholar</p>
-          <p>
-            Eight-week full-time research internship on the EPFL Biotech
-            Campus, investigating the links between the sense of agency and
-            episodic memory. Designed, programmed and deployed an online
-            experimental platform for large-scale data collection.
-          </p>
-          <a
-            class="proj-link"
-            href="https://laidlawscholars.network/documents/investigating_the_relationship_between_episodic_memory_and_sense_of_agency-67e57e47-ae0f-4714-a5b5-b469a358a357"
-            target="_blank"
-            rel="noopener"
-            >Read the research report →</a
-          >
-        </div>
-        <div class="t-item reveal">
-          <span class="t-date">Feb – Jul 2026 · Lausanne</span>
-          <h3>Teaching Assistant — Bio-organic Chemistry (BIO-110)</h3>
-          <p class="t-org">EPFL</p>
-          <p>
-            Teaching assistant for Prof. Bruno Correia's BIO-110 course: led
-            weekly exercise sessions, prepared exercise sheets and revision
-            lectures, and designed the final lecture on amino-acid structure,
-            sequencing and peptide synthesis from scratch.
-          </p>
-        </div>
-        <div class="t-item reveal">
-          <span class="t-date">Feb 2025 – Jul 2026 · Lausanne</span>
-          <h3>Student Representative</h3>
-          <p class="t-org">EPFL — Life Sciences Engineering</p>
-          <p>
-            Elected representative for the first- and second-year Life
-            Sciences Engineering cohorts (~340 students), channelling peer
-            feedback into tangible changes in course organisation and student
-            support.
-          </p>
-        </div>
-        <div class="t-item reveal">
-          <span class="t-date">Oct 2023 · Budapest</span>
-          <h3>Hematology Intern</h3>
-          <p class="t-org">Semmelweis University Hospital</p>
-          <p>
-            Clinical internship in the Hematology Department under Prof.
-            Péter Farkas — an early, formative encounter with the human side
-            of medicine.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section id="honors">
-      <div class="sec-head reveal">
-        <span class="sec-index">FIG. 06</span>
-        <h2>Honors & Involvement</h2>
-        <div class="sec-rule"></div>
-      </div>
-      <div class="honors-layout">
-        <div class="reveal">
-          <h3>Honors & Awards</h3>
-          <ul class="line-list">
-            <li>
-              <div class="li-title">BIO-210 Programming Competition — Top Recognition</div>
-              <div class="li-meta">EPFL · Dec 2025</div>
-              <div class="li-desc">
-                Team of 3 selected among ~180 participants; project
-                distinguished for computational efficiency, testing and
-                documentation (Hopfield Network implementation).
-              </div>
-            </li>
-            <li>
-              <div class="li-title">
-                Baccalauréat Général — Mention très bien avec les félicitations
-                du jury
-              </div>
-              <div class="li-meta">Académie de Strasbourg · Jun 2024</div>
-              <div class="li-desc">
-                Overall average 19.24/20 — high school valedictorian.
-              </div>
-            </li>
-            <li>
-              <div class="li-title">
-                National Geosciences Olympiad of AEFE — 3rd place
-              </div>
-              <div class="li-meta">AEFE · Sep 2023</div>
-            </li>
-          </ul>
-        </div>
-        <div class="reveal">
-          <h3>Leadership & Involvement</h3>
-          <ul class="line-list">
-            <li>
-              <div class="li-title">Faculty Representative</div>
-              <div class="li-meta">AESV, EPFL · Oct 2025 – present</div>
-              <div class="li-desc">
-                Member of the Commission of Student Section Representatives
-                (CERES).
-              </div>
-            </li>
-            <li>
-              <div class="li-title">Student Body Representative</div>
-              <div class="li-meta">AGEPoly · Sep 2025 – Jan 2026</div>
-              <div class="li-desc">
-                Represented EPFL students on the Human and Social Sciences
-                Courses Teaching Commission.
-              </div>
-            </li>
-            <li>
-              <div class="li-title">Student Integration Coach</div>
-              <div class="li-meta">Coaching EPFL · Aug 2025 – present</div>
-            </li>
-            <li>
-              <div class="li-title">Staff Volunteer</div>
-              <div class="li-meta">
-                EPFL Sustainable Innovation Challenge · Mar 2025
-              </div>
-              <div class="li-desc">
-                Assisted with event-stand logistics and catering — a year
-                before returning as Challenge Team Leader.
-              </div>
-            </li>
-            <li>
-              <div class="li-title">
-                High School Governing Board Representative
-              </div>
-              <div class="li-meta">
-                Lycée Gustave Eiffel, Budapest · 2022 – 2024
-              </div>
-              <div class="li-desc">
-                Elected to the Governing Board and the Conseil de Vie
-                Lycéenne; eco-delegate on the Sustainable Development
-                Committee.
-              </div>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section id="blog-teaser">
-      <div class="sec-head reveal">
-        <span class="sec-index" style="color: #9dbfa9">FIG. 07</span>
-        <h2>From the Blog</h2>
-        <div class="sec-rule"></div>
-      </div>
-      <p class="sec-kicker reveal">
-        Notes on research, leadership and the road to neurosurgery &
-        neurotechnology.
-      </p>
-      <div class="blog-grid reveal">
-        <a class="blog-card" href="blog/choosing-life-sciences-engineering.html">
-          <span class="blog-date">July 2026 · Singapore</span>
-          <h3>Why I Chose Engineering Over Medical School</h3>
-          <p>
-            On the hematology ward in Budapest that convinced me the answer
-            wasn't medicine or engineering — it was both.
-          </p>
-          <span class="blog-more">Read more →</span>
-        </a>
-        <a class="blog-card" href="blog/sustainable-innovation-challenge-2026.html">
-          <span class="blog-date">May 2026 · Lausanne</span>
-          <h3>Leading the EPFL Sustainable Innovation Challenge 2026</h3>
-          <p>
-            Eleven months of building a challenge from scratch, eight
-            finalist teams, and what I learned about identifying the gaps
-            that let ideas scale.
-          </p>
-          <span class="blog-more">Read more →</span>
-        </a>
-        <a class="blog-card" href="blog/sense-of-agency-episodic-memory.html">
-          <span class="blog-date">September 2025 · Geneva</span>
-          <h3>Investigating Sense of Agency & Episodic Memory</h3>
-          <p>
-            Inside my Laidlaw summer at EPFL's LNCO: building an online
-            experiment, wrestling with AI-assisted coding, and what the data
-            is starting to show.
-          </p>
-          <span class="blog-more">Read more →</span>
-        </a>
-      </div>
-      <div class="masthead-cta reveal" style="margin-top: 2.4rem">
-        <a class="btn btn-line" href="blog.html">View all posts</a>
-      </div>
-    </section>
-
-    <section id="contact">
-      <div class="sec-head reveal">
-        <span class="sec-index">FIG. 08</span>
-        <h2>Contact</h2>
-        <div class="sec-rule"></div>
-      </div>
-      <p class="contact-lead reveal">
-        Open to conversations about neuroscience, rehabilitation technology,
-        research collaborations and interesting problems in general.
-      </p>
-      <div class="socials reveal">
-        <a class="btn btn-solid" href="mailto:bruno.siniciali@epfl.ch">Email</a>
-        <a
-          class="btn btn-line"
-          href="https://www.linkedin.com/in/bruno-rapha%C3%ABl-siniciali/"
-          target="_blank"
-          rel="noopener"
-          >LinkedIn</a
-        >
-        <a
-          class="btn btn-line"
-          href="https://laidlawscholars.network/"
-          target="_blank"
-          rel="noopener"
-          >Laidlaw Scholars Network</a
-        >
-        <a
-          class="btn btn-line"
-          href="https://people.epfl.ch/bruno.siniciali/?lang=en"
-          target="_blank"
-          rel="noopener"
-          >EPFL Directory</a
-        >
-        <a
-          class="btn btn-line"
-          href="https://github.com/siniciali"
-          target="_blank"
-          rel="noopener"
-          >GitHub</a
-        >
       </div>
     </section>
 
     <footer>
-      <span>© 2026 Bruno Raphaël Siniciali</span>
-      <span class="geo" aria-hidden="true"
-        ><span></span><span></span><span></span
-      ></span>
-      <span><a href="blog.html">Blog</a> · siniciali.com</span>
+      <div class="container">
+        <span>© 2026 Bruno Raphaël Siniciali</span>
+        <span class="geo" aria-hidden="true"
+          ><span></span><span></span><span></span
+        ></span>
+        <span><a href="#lineage">Colophon</a> · siniciali.com</span>
+      </div>
     </footer>
 
     <script src="assets/site.js"></script>

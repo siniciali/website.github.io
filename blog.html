@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Blog — Bruno Raphaël Siniciali</title>
+    <title>Writing — Bruno Raphaël Siniciali</title>
     <meta
       name="description"
       content="Notes from Bruno Raphaël Siniciali on neuroscience research, rehabilitation robotics and leadership — from EPFL's LNCO to Roceso Technologies in Singapore."
@@ -12,67 +12,16 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Unbounded:wght@600;700;800;900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=IBM+Plex+Mono:wght@400;500&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="assets/style.css" />
-    <style>
-      .nav-toggle {
-        display: none;
-        background: none;
-        border: 2px solid var(--ink);
-        color: var(--ink);
-        font-family: "IBM Plex Mono", monospace;
-        font-size: 0.9rem;
-        padding: 0.4rem 0.7rem;
-        cursor: pointer;
-      }
-      @media (max-width: 880px) {
-        .nav-toggle {
-          display: block;
-        }
-        .site-nav ul {
-          display: none;
-          position: absolute;
-          top: 100%;
-          left: 0;
-          right: 0;
-          flex-direction: column;
-          gap: 0;
-          background: var(--beige-light);
-          border-bottom: 3px solid var(--ink);
-          padding: 0.5rem 4vw 1rem;
-        }
-        .site-nav ul.open {
-          display: flex;
-        }
-        .site-nav ul a {
-          display: block;
-          padding: 0.85rem 0;
-          border-bottom: 1px solid var(--line);
-        }
-      }
-      .blog-hero {
-        padding: 8.5rem 4vw 2rem;
-      }
-      .blog-hero h1 {
-        font-weight: 800;
-        text-transform: uppercase;
-        font-size: clamp(1.9rem, 4.6vw, 3.2rem);
-        line-height: 1.05;
-      }
-      .blog-hero p {
-        margin-top: 1rem;
-        max-width: 44rem;
-        font-size: 1.05rem;
-      }
-    </style>
   </head>
   <body>
     <nav class="site-nav">
       <a class="nav-mark" href="index.html">
         <img class="nav-bear" src="assets/bear-logo.png" alt="" />
-        SINICIALI</a
+        Siniciali</a
       >
       <button
         class="nav-toggle"
@@ -88,61 +37,69 @@
         <li><a href="index.html#research">Research</a></li>
         <li><a href="index.html#education">Education</a></li>
         <li><a href="index.html#experience">Experience</a></li>
-        <li><a href="blog.html" class="current">Blog</a></li>
+        <li><a href="blog.html" class="current">Writing</a></li>
         <li><a href="index.html#contact">Contact</a></li>
       </ul>
     </nav>
 
-    <header class="blog-hero">
-      <p class="eyebrow">Writing</p>
-      <h1>Notes from the lab, the clinic and everywhere in between</h1>
-      <p>
-        Longer-form reflections on research, leadership and the slow build
-        toward neurosurgery and neurotechnology — written as I go, not
-        polished after the fact.
-      </p>
+    <header class="page-head">
+      <div class="container">
+        <span class="sec-bar rise d1"></span>
+        <h1 class="rise d2">
+          Notes from the lab, the clinic and everywhere in between.
+        </h1>
+        <p class="lead rise d3">
+          Longer-form reflections on research, leadership and the slow build
+          toward neurosurgery and neurotechnology — written as I go, not
+          polished after the fact.
+        </p>
+      </div>
     </header>
 
-    <section style="padding-top: 1rem">
-      <div class="blog-grid light reveal">
-        <a class="blog-card" href="blog/choosing-life-sciences-engineering.html">
-          <span class="blog-date">July 2026 · Singapore</span>
-          <h3>Why I Chose Engineering Over Medical School</h3>
-          <p>
-            On the hematology ward in Budapest that convinced me the answer
-            wasn't medicine or engineering — it was both.
-          </p>
-          <span class="blog-more">Read more →</span>
-        </a>
-        <a class="blog-card" href="blog/sustainable-innovation-challenge-2026.html">
-          <span class="blog-date">May 2026 · Lausanne</span>
-          <h3>Leading the EPFL Sustainable Innovation Challenge 2026</h3>
-          <p>
-            Eleven months of building a challenge from scratch, eight
-            finalist teams, and what I learned about identifying the gaps
-            that let ideas scale.
-          </p>
-          <span class="blog-more">Read more →</span>
-        </a>
-        <a class="blog-card" href="blog/sense-of-agency-episodic-memory.html">
-          <span class="blog-date">September 2025 · Geneva</span>
-          <h3>Investigating Sense of Agency & Episodic Memory</h3>
-          <p>
-            Inside my Laidlaw summer at EPFL's LNCO: building an online
-            experiment, wrestling with AI-assisted coding, and what the data
-            is starting to show.
-          </p>
-          <span class="blog-more">Read more →</span>
-        </a>
+    <section class="section" style="padding-top: 0">
+      <div class="container">
+        <div class="writing-grid reveal">
+          <a class="post-card" href="blog/choosing-life-sciences-engineering.html">
+            <span class="when">July 2026 · Singapore</span>
+            <h3>Why I Chose Engineering Over Medical School</h3>
+            <p>
+              On the hematology ward in Budapest that convinced me the answer
+              wasn't medicine or engineering — it was both.
+            </p>
+            <span class="more">Read</span>
+          </a>
+          <a class="post-card" href="blog/sustainable-innovation-challenge-2026.html">
+            <span class="when">May 2026 · Lausanne</span>
+            <h3>Leading the EPFL Sustainable Innovation Challenge</h3>
+            <p>
+              Eleven months of building a challenge from scratch, eight
+              finalist teams, and what I learned about the gaps that let ideas
+              scale.
+            </p>
+            <span class="more">Read</span>
+          </a>
+          <a class="post-card" href="blog/sense-of-agency-episodic-memory.html">
+            <span class="when">September 2025 · Geneva</span>
+            <h3>Investigating Sense of Agency &amp; Episodic Memory</h3>
+            <p>
+              Inside my Laidlaw summer at EPFL's LNCO: building an online
+              experiment, wrestling with AI-assisted coding, and what the data
+              is starting to show.
+            </p>
+            <span class="more">Read</span>
+          </a>
+        </div>
       </div>
     </section>
 
     <footer>
-      <span>© 2026 Bruno Raphaël Siniciali</span>
-      <span class="geo" aria-hidden="true"
-        ><span></span><span></span><span></span
-      ></span>
-      <span><a href="index.html">Home</a> · siniciali.com</span>
+      <div class="container">
+        <span>© 2026 Bruno Raphaël Siniciali</span>
+        <span class="geo" aria-hidden="true"
+          ><span></span><span></span><span></span
+        ></span>
+        <span><a href="index.html">Home</a> · siniciali.com</span>
+      </div>
     </footer>
 
     <script src="assets/site.js"></script>
