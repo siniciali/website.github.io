@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog — Bruno Raphaël Siniciali</title>
+    <meta
+      name="description"
+      content="Notes from Bruno Raphaël Siniciali on neuroscience research, rehabilitation robotics and leadership — from EPFL's LNCO to Roceso Technologies in Singapore."
+    />
+    <link rel="icon" type="image/png" href="assets/favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&family=Work+Sans:ital,wght@0,300;0,400;0,500;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/style.css" />
+    <style>
+      .nav-toggle {
+        display: none;
+        background: none;
+        border: 2px solid var(--green);
+        color: var(--green-deep);
+        font-family: "Jost", sans-serif;
+        font-size: 0.9rem;
+        padding: 0.4rem 0.7rem;
+        cursor: pointer;
+      }
+      @media (max-width: 880px) {
+        .nav-toggle {
+          display: block;
+        }
+        nav ul {
+          display: none;
+          position: absolute;
+          top: 100%;
+          left: 0;
+          right: 0;
+          flex-direction: column;
+          gap: 0;
+          background: var(--beige-light);
+          border-bottom: 2px solid var(--green);
+          padding: 0.5rem 4vw 1rem;
+        }
+        nav ul.open {
+          display: flex;
+        }
+        nav ul a {
+          display: block;
+          padding: 0.85rem 0;
+          border-bottom: 1px solid var(--line);
+        }
+      }
+      .blog-hero {
+        padding: 8.5rem 4vw 2rem;
+      }
+      .blog-hero h1 {
+        font-size: clamp(2rem, 4.6vw, 3.2rem);
+      }
+      .blog-hero p {
+        margin-top: 1rem;
+        max-width: 44rem;
+        font-size: 1.05rem;
+        font-weight: 300;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <a class="nav-mark" href="index.html">
+        <img class="nav-bear" src="assets/bear-logo.png" alt="" />
+        B·R·S</a
+      >
+      <button
+        class="nav-toggle"
+        id="navToggle"
+        aria-label="Toggle navigation"
+        aria-expanded="false"
+        aria-controls="navLinks"
+      >
+        ☰
+      </button>
+      <ul id="navLinks">
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#research">Research</a></li>
+        <li><a href="index.html#experience">Experience</a></li>
+        <li><a href="index.html#education">Education</a></li>
+        <li><a href="index.html#skills">Skills</a></li>
+        <li><a href="blog.html" class="current">Blog</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <header class="blog-hero">
+      <p class="hero-eyebrow">Writing</p>
+      <h1>Notes from the lab, the clinic and everywhere in between</h1>
+      <p>
+        Longer-form reflections on research, leadership and the slow build
+        toward neurosurgery and neurotechnology — written as I go, not polished
+        after the fact.
+      </p>
+    </header>
+
+    <section style="padding-top: 1rem">
+      <div class="blog-grid light reveal">
+        <a
+          class="blog-card"
+          href="blog/choosing-life-sciences-engineering.html"
+        >
+          <span class="blog-date">July 2026 · Singapore</span>
+          <h3>Why I Chose Engineering Over Medical School</h3>
+          <p>
+            On the hematology ward in Budapest that convinced me the answer
+            wasn't medicine or engineering — it was both.
+          </p>
+          <span class="blog-more">Read more →</span>
+        </a>
+        <a
+          class="blog-card"
+          href="blog/sustainable-innovation-challenge-2026.html"
+        >
+          <span class="blog-date">May 2026 · Lausanne</span>
+          <h3>Leading the EPFL Sustainable Innovation Challenge 2026</h3>
+          <p>
+            Eleven months of building a challenge from scratch, eight finalist
+            teams, and what I learned about identifying the gaps that let ideas
+            scale.
+          </p>
+          <span class="blog-more">Read more →</span>
+        </a>
+        <a class="blog-card" href="blog/sense-of-agency-episodic-memory.html">
+          <span class="blog-date">September 2025 · Geneva</span>
+          <h3>Investigating Sense of Agency & Episodic Memory</h3>
+          <p>
+            Inside my Laidlaw summer at EPFL's LNCO: building an online
+            experiment, wrestling with AI-assisted coding, and what the data is
+            starting to show.
+          </p>
+          <span class="blog-more">Read more →</span>
+        </a>
+      </div>
+    </section>
+
+    <footer>
+      <span>© 2026 Bruno Raphaël Siniciali</span>
+      <span class="geo" aria-hidden="true"
+        ><span></span><span></span><span></span
+      ></span>
+      <span><a href="index.html">Home</a> · siniciali.com</span>
+    </footer>
+
+    <script src="assets/site.js"></script>
+    <script>
+      const navToggle = document.getElementById("navToggle");
+      const navLinks = document.getElementById("navLinks");
+      if (navToggle && navLinks) {
+        navToggle.addEventListener("click", () => {
+          const open = navLinks.classList.toggle("open");
+          navToggle.setAttribute("aria-expanded", open ? "true" : "false");
+        });
+        navLinks.querySelectorAll("a").forEach((a) =>
+          a.addEventListener("click", () => {
+            navLinks.classList.remove("open");
+            navToggle.setAttribute("aria-expanded", "false");
+          }),
+        );
+      }
+    </script>
+  </body>
+</html>

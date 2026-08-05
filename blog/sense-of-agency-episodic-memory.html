@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Investigating Sense of Agency & Episodic Memory — Bruno Raphaël Siniciali</title>
+    <meta
+      name="description"
+      content="Inside a Laidlaw summer at EPFL's Laboratory of Cognitive Neuroscience: building an online experiment testing whether the sense of agency strengthens episodic memory."
+    />
+    <link rel="icon" type="image/png" href="../assets/favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&family=Work+Sans:ital,wght@0,300;0,400;0,500;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../assets/style.css" />
+    <style>
+      .nav-toggle {
+        display: none;
+        background: none;
+        border: 2px solid var(--green);
+        color: var(--green-deep);
+        font-family: "Jost", sans-serif;
+        font-size: 0.9rem;
+        padding: 0.4rem 0.7rem;
+        cursor: pointer;
+      }
+      @media (max-width: 880px) {
+        .nav-toggle {
+          display: block;
+        }
+        nav ul {
+          display: none;
+          position: absolute;
+          top: 100%;
+          left: 0;
+          right: 0;
+          flex-direction: column;
+          gap: 0;
+          background: var(--beige-light);
+          border-bottom: 2px solid var(--green);
+          padding: 0.5rem 4vw 1rem;
+        }
+        nav ul.open {
+          display: flex;
+        }
+        nav ul a {
+          display: block;
+          padding: 0.85rem 0;
+          border-bottom: 1px solid var(--line);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <a class="nav-mark" href="../index.html">
+        <img class="nav-bear" src="../assets/bear-logo.png" alt="" />
+        B·R·S</a
+      >
+      <button
+        class="nav-toggle"
+        id="navToggle"
+        aria-label="Toggle navigation"
+        aria-expanded="false"
+        aria-controls="navLinks"
+      >
+        ☰
+      </button>
+      <ul id="navLinks">
+        <li><a href="../index.html#about">About</a></li>
+        <li><a href="../index.html#research">Research</a></li>
+        <li><a href="../index.html#experience">Experience</a></li>
+        <li><a href="../index.html#education">Education</a></li>
+        <li><a href="../index.html#skills">Skills</a></li>
+        <li><a href="../blog.html" class="current">Blog</a></li>
+        <li><a href="../index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <header class="post-hero">
+      <span class="blog-date">September 2025 · Geneva</span>
+      <h1>Investigating Sense of Agency & Episodic Memory</h1>
+      <p class="post-dek">
+        Eight weeks at EPFL's Laboratory of Cognitive Neuroscience, building
+        an online experiment to test whether feeling in control of your
+        actions makes you remember them better.
+      </p>
+    </header>
+
+    <article class="post-body">
+      <a class="back-link" href="../blog.html">← Back to all posts</a>
+
+      <p>
+        “What is left over if I subtract the fact that my arm goes up from the
+        fact that I raise my arm?” Wittgenstein's question opens the research
+        report I wrote at the end of this project, and it's the question that
+        sat behind everything I did this summer as a Laidlaw Scholar in
+        Prof. Olaf Blanke's Laboratory of Cognitive Neuroscience (LNCO), under
+        the supervision of Dr. Bruno Herbelin and Dr. Qiaoyue Ren.
+      </p>
+
+      <h2>The question</h2>
+      <p>
+        The sense of agency is the subjective experience of controlling your
+        own actions and their effects — the quiet, usually invisible
+        conviction that when you press a light switch, <em>you</em> are the
+        one who turned the light on. We only really notice it when it fails:
+        when the switch doesn't respond, or the outcome doesn't match what we
+        expected.
+      </p>
+      <p>
+        Episodic memory is the ability to recall specific past events, not
+        just facts. It's reconstructive rather than a neutral recording, which
+        makes it sensitive to internal states — emotion, expectation, and,
+        we hypothesised, agency itself. If an event is self-caused, we reasoned,
+        it should feel more like it "belongs" to you, strengthening its link
+        to your sense of self and making it more memorable. My role this
+        summer was to build the tool that could test that hypothesis at scale.
+      </p>
+
+      <h2>Building the experiment</h2>
+      <p>
+        Participants move objects across a screen using a keyboard. In some
+        trials, the object's movement matches their input exactly
+        (congruent); in others, it diverges from what they intended
+        (incongruent) — a controlled way of dialing the sense of agency up or
+        down. After each trial, participants rate how much control they felt
+        over the object's movement. Later, in a second session, they're asked
+        whether they've seen each image before, and where it ended up.
+      </p>
+      <p>
+        Taking the experiment online — rather than lab-only — meant it could
+        reach a much wider and more representative pool of participants. My
+        main technical contribution was building that online platform from
+        the ground up, and adding a feature the lab hadn't used before:
+        confidence ratings after each recognition trial, to see whether
+        subjective confidence tracks the same agency effect as raw accuracy.
+      </p>
+
+      <h2>What the data is starting to show</h2>
+      <p>
+        Full data collection for the confidence-rating protocol is still
+        ongoing, but a related earlier study by Dr. Ren and Killian Raude
+        (EPFL Neuro-X Master's student) gives a preview. Participants
+        reported a higher sense of control in congruent trials, as expected.
+        More interestingly, congruency improved memory for
+        <em>where</em> an object ended up — spatial memory — but not for
+        <em>what</em> the object was — item memory. That asymmetry suggests
+        agency strengthens the binding between an action and its
+        consequences specifically, rather than boosting memory indiscriminately.
+      </p>
+      <p>
+        It's a small but real result, and it points toward something with
+        genuine clinical relevance: hypoagentic states — the diminished or
+        distorted sense of control seen in schizophrenia and Alzheimer's
+        disease — could be connected to the memory deficits that accompany
+        them. If agency really is a retrieval cue, strengthening it might
+        become part of how we support memory in those conditions.
+      </p>
+
+      <h2>The part I didn't expect to write about</h2>
+      <p>
+        Somewhere in the middle of the summer, I lost my own sense of agency
+        over the work. I leaned too hard on AI tools to write code I didn't
+        fully understand conceptually, got stuck debugging things I couldn't
+        reason about, and stopped feeling the sense of accomplishment I
+        normally get from intellectual work. My attention drifted. It's a
+        strange thing to notice you're studying agency while feeling
+        conspicuously short of it.
+      </p>
+      <p>
+        With help from one of my supervisors, I deliberately slowed down and
+        retook control of the implementation — writing more of the logic
+        myself, understanding it before shipping it. The work got harder
+        before it got easier, but the sense of ownership came back, and so
+        did the satisfaction. It turned out to be the most honest data point
+        I collected all summer, even if it never made it into a figure.
+      </p>
+
+      <blockquote>
+        A higher sense of agency enhanced recollection of the spatial
+        location of objects — evidence that agency does shape episodic
+        memory, particularly for the consequences of our actions.
+      </blockquote>
+
+      <p>
+        The full report — background, methodology, results, and a longer
+        discussion of the legal and clinical implications of agency,
+        including the Milgram experiment — is available on the Laidlaw
+        Scholars Network.
+      </p>
+      <p>
+        <a
+          href="https://laidlawscholars.network/documents/investigating_the_relationship_between_episodic_memory_and_sense_of_agency-67e57e47-ae0f-4714-a5b5-b469a358a357"
+          target="_blank"
+          rel="noopener"
+          >Read the full research report →</a
+        >
+      </p>
+    </article>
+
+    <footer>
+      <span>© 2026 Bruno Raphaël Siniciali</span>
+      <span class="geo" aria-hidden="true"
+        ><span></span><span></span><span></span
+      ></span>
+      <span><a href="../index.html">Home</a> · siniciali.com</span>
+    </footer>
+
+    <script src="../assets/site.js"></script>
+    <script>
+      const navToggle = document.getElementById("navToggle");
+      const navLinks = document.getElementById("navLinks");
+      if (navToggle && navLinks) {
+        navToggle.addEventListener("click", () => {
+          const open = navLinks.classList.toggle("open");
+          navToggle.setAttribute("aria-expanded", open ? "true" : "false");
+        });
+        navLinks.querySelectorAll("a").forEach((a) =>
+          a.addEventListener("click", () => {
+            navLinks.classList.remove("open");
+            navToggle.setAttribute("aria-expanded", "false");
+          }),
+        );
+      }
+    </script>
+  </body>
+</html>
