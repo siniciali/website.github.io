@@ -1,0 +1,966 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bruno Raphaël Siniciali — Life Sciences Engineering, EPFL</title>
+    <meta
+      name="description"
+      content="Bruno Raphaël Siniciali — Life Sciences Engineering student at EPFL, Laidlaw Scholar, aspiring neuroscientist working at the intersection of neuroscience, engineering and medicine."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&family=Work+Sans:ital,wght@0,300;0,400;0,500;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --beige: #eae3d2;
+        --beige-light: #f2ede0;
+        --beige-deep: #ddd3bc;
+        --green: #1e4d3b;
+        --green-deep: #0f2e23;
+        --green-soft: #3a6b54;
+        --ink: #1c1b17;
+        --line: #c9bfa6;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        background: var(--beige);
+        color: var(--ink);
+        font-family: "Work Sans", sans-serif;
+        font-weight: 400;
+        line-height: 1.65;
+        -webkit-font-smoothing: antialiased;
+      }
+      h1,
+      h2,
+      h3,
+      .display {
+        font-family: "Jost", sans-serif;
+      }
+
+      /* ---------- NAV ---------- */
+      nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 100;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1.1rem 4vw;
+        background: color-mix(in srgb, var(--beige) 88%, transparent);
+        backdrop-filter: blur(8px);
+        border-bottom: 2px solid var(--green);
+      }
+      .nav-mark {
+        display: flex;
+        align-items: center;
+        gap: 0.6rem;
+        font-family: "Jost", sans-serif;
+        font-weight: 700;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        font-size: 0.85rem;
+        color: var(--green-deep);
+        text-decoration: none;
+      }
+      .nav-mark .dot {
+        width: 14px;
+        height: 14px;
+        background: var(--green);
+        border-radius: 50%;
+      }
+      nav ul {
+        display: flex;
+        gap: 2rem;
+        list-style: none;
+      }
+      nav ul a {
+        font-family: "Jost", sans-serif;
+        font-size: 0.8rem;
+        font-weight: 500;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--ink);
+        text-decoration: none;
+        padding-bottom: 0.2rem;
+        border-bottom: 2px solid transparent;
+        transition: border-color 0.2s;
+      }
+      nav ul a:hover,
+      nav ul a:focus-visible {
+        border-color: var(--green);
+      }
+      @media (max-width: 720px) {
+        nav ul {
+          display: none;
+        }
+      }
+
+      /* ---------- HERO ---------- */
+      header {
+        min-height: 100vh;
+        display: grid;
+        grid-template-columns: 1.15fr 0.85fr;
+        align-items: center;
+        gap: 3rem;
+        padding: 7rem 4vw 4rem;
+        position: relative;
+        overflow: hidden;
+      }
+      .hero-eyebrow {
+        font-family: "Jost", sans-serif;
+        font-weight: 600;
+        font-size: 0.8rem;
+        letter-spacing: 0.28em;
+        text-transform: uppercase;
+        color: var(--green);
+        display: flex;
+        align-items: center;
+        gap: 0.8rem;
+        margin-bottom: 1.4rem;
+      }
+      .hero-eyebrow::before {
+        content: "";
+        width: 2.4rem;
+        height: 3px;
+        background: var(--green);
+      }
+      h1 {
+        font-size: clamp(2.6rem, 6.5vw, 5.2rem);
+        font-weight: 600;
+        line-height: 1.04;
+        letter-spacing: -0.015em;
+        color: var(--green-deep);
+        text-wrap: balance;
+      }
+      h1 .thin {
+        font-weight: 400;
+        color: var(--ink);
+      }
+      .hero-sub {
+        margin-top: 1.6rem;
+        max-width: 34rem;
+        font-size: 1.08rem;
+        font-weight: 300;
+      }
+      .hero-cta {
+        margin-top: 2.4rem;
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+      }
+      .btn {
+        font-family: "Jost", sans-serif;
+        font-weight: 600;
+        font-size: 0.82rem;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 0.95rem 1.8rem;
+        transition:
+          transform 0.15s,
+          background 0.2s,
+          color 0.2s;
+        display: inline-block;
+      }
+      .btn-solid {
+        background: var(--green);
+        color: var(--beige-light);
+      }
+      .btn-solid:hover {
+        background: var(--green-deep);
+        transform: translateY(-2px);
+      }
+      .btn-line {
+        border: 2px solid var(--green);
+        color: var(--green-deep);
+      }
+      .btn-line:hover {
+        background: var(--green);
+        color: var(--beige-light);
+        transform: translateY(-2px);
+      }
+
+      /* Bauhaus hero composition */
+      .hero-art {
+        position: relative;
+        aspect-ratio: 1;
+        max-width: 480px;
+        width: 100%;
+        justify-self: center;
+      }
+      .hero-art svg {
+        width: 100%;
+        height: 100%;
+        display: block;
+      }
+      @media (max-width: 880px) {
+        header {
+          grid-template-columns: 1fr;
+          padding-top: 6.5rem;
+        }
+        .hero-art {
+          max-width: 320px;
+        }
+      }
+
+      /* ---------- SECTION SCAFFOLD ---------- */
+      section {
+        padding: 5.5rem 4vw;
+        position: relative;
+      }
+      .sec-head {
+        display: flex;
+        align-items: baseline;
+        gap: 1.4rem;
+        margin-bottom: 3rem;
+        flex-wrap: wrap;
+      }
+      .sec-shape {
+        width: 22px;
+        height: 22px;
+        flex: none;
+        align-self: center;
+      }
+      h2 {
+        font-size: clamp(1.7rem, 3.4vw, 2.6rem);
+        font-weight: 600;
+        letter-spacing: -0.01em;
+        color: var(--green-deep);
+        text-transform: uppercase;
+      }
+      .sec-rule {
+        flex: 1;
+        height: 2px;
+        background: var(--line);
+        min-width: 60px;
+      }
+
+      /* ---------- ABOUT ---------- */
+      #about {
+        background: var(--beige-light);
+        border-top: 2px solid var(--green);
+      }
+      .about-grid {
+        display: grid;
+        grid-template-columns: 1.3fr 0.7fr;
+        gap: 4rem;
+        align-items: start;
+      }
+      .about-grid p {
+        margin-bottom: 1.2rem;
+        max-width: 60ch;
+      }
+      .about-grid p:last-child {
+        margin-bottom: 0;
+      }
+      .fact-card {
+        background: var(--beige);
+        border: 2px solid var(--green);
+        padding: 2rem;
+      }
+      .fact-card h3 {
+        font-size: 0.85rem;
+        font-weight: 700;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: var(--green);
+        margin-bottom: 1.2rem;
+      }
+      .fact-card ul {
+        list-style: none;
+      }
+      .fact-card li {
+        padding: 0.65rem 0;
+        border-bottom: 1px solid var(--line);
+        font-size: 0.95rem;
+        display: flex;
+        gap: 0.7rem;
+        align-items: baseline;
+      }
+      .fact-card li:last-child {
+        border-bottom: none;
+      }
+      .fact-card li::before {
+        content: "";
+        width: 8px;
+        height: 8px;
+        background: var(--green);
+        flex: none;
+        transform: translateY(-1px);
+      }
+      .fact-card li:nth-child(3n + 2)::before {
+        border-radius: 50%;
+      }
+      .fact-card li:nth-child(3n)::before {
+        background: transparent;
+        width: 0;
+        height: 0;
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        border-bottom: 9px solid var(--green);
+      }
+      @media (max-width: 880px) {
+        .about-grid {
+          grid-template-columns: 1fr;
+          gap: 2.5rem;
+        }
+      }
+
+      /* ---------- RESEARCH / PROJECTS ---------- */
+      .proj-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+        gap: 2px;
+        background: var(--line);
+        border: 2px solid var(--green);
+      }
+      .proj {
+        background: var(--beige);
+        padding: 2.2rem 2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.9rem;
+        transition: background 0.25s;
+      }
+      .proj:hover {
+        background: var(--beige-light);
+      }
+      .proj-tag {
+        font-family: "Jost", sans-serif;
+        font-size: 0.72rem;
+        font-weight: 700;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: var(--green);
+      }
+      .proj h3 {
+        font-size: 1.25rem;
+        font-weight: 600;
+        color: var(--green-deep);
+        line-height: 1.25;
+      }
+      .proj p {
+        font-size: 0.95rem;
+        font-weight: 300;
+      }
+      .proj-shape {
+        width: 26px;
+        height: 26px;
+        margin-bottom: 0.3rem;
+      }
+
+      /* ---------- EXPERIENCE TIMELINE ---------- */
+      #experience {
+        background: var(--green-deep);
+        color: var(--beige);
+      }
+      #experience h2 {
+        color: var(--beige-light);
+      }
+      #experience .sec-rule {
+        background: var(--green-soft);
+      }
+      .timeline {
+        position: relative;
+        margin-left: 10px;
+      }
+      .timeline::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 8px;
+        bottom: 8px;
+        width: 3px;
+        background: var(--green-soft);
+      }
+      .t-item {
+        position: relative;
+        padding: 0 0 2.6rem 2.4rem;
+      }
+      .t-item:last-child {
+        padding-bottom: 0;
+      }
+      .t-item::before {
+        content: "";
+        position: absolute;
+        left: -8.5px;
+        top: 6px;
+        width: 20px;
+        height: 20px;
+        background: var(--beige);
+        border: 3px solid var(--green-soft);
+        border-radius: 50%;
+      }
+      .t-item:nth-child(even)::before {
+        border-radius: 0;
+        transform: rotate(45deg) scale(0.86);
+      }
+      .t-date {
+        font-family: "Jost", sans-serif;
+        font-size: 0.78rem;
+        font-weight: 600;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: #9dbfa9;
+      }
+      .t-item h3 {
+        font-size: 1.25rem;
+        font-weight: 600;
+        margin: 0.3rem 0 0.15rem;
+        color: var(--beige-light);
+      }
+      .t-org {
+        font-size: 0.92rem;
+        font-style: italic;
+        color: #c9d8cb;
+        margin-bottom: 0.5rem;
+      }
+      .t-item p {
+        font-size: 0.95rem;
+        font-weight: 300;
+        max-width: 62ch;
+        color: #e4e0d2;
+      }
+
+      /* ---------- EDUCATION ---------- */
+      .edu-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+        gap: 1.6rem;
+      }
+      .edu {
+        border: 2px solid var(--green);
+        padding: 2rem;
+        background: var(--beige-light);
+        position: relative;
+      }
+      .edu::after {
+        content: "";
+        position: absolute;
+        top: -2px;
+        right: -2px;
+        width: 34px;
+        height: 34px;
+        background: var(--green);
+        clip-path: polygon(100% 0, 0 0, 100% 100%);
+      }
+      .edu .t-date {
+        color: var(--green);
+      }
+      .edu h3 {
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: var(--green-deep);
+        margin: 0.35rem 0 0.2rem;
+      }
+      .edu p {
+        font-size: 0.93rem;
+        font-weight: 300;
+      }
+
+      /* ---------- CONTACT ---------- */
+      #contact {
+        background: var(--beige-light);
+        border-top: 2px solid var(--green);
+        text-align: center;
+      }
+      #contact .sec-head {
+        justify-content: center;
+      }
+      .contact-lead {
+        max-width: 46ch;
+        margin: 0 auto 2.4rem;
+        font-weight: 300;
+        font-size: 1.05rem;
+      }
+      .socials {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        flex-wrap: wrap;
+      }
+      footer {
+        padding: 2rem 4vw;
+        background: var(--green-deep);
+        color: #b9cbb9;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1rem;
+        flex-wrap: wrap;
+        font-size: 0.82rem;
+        font-family: "Jost", sans-serif;
+        letter-spacing: 0.1em;
+      }
+      footer .geo {
+        display: flex;
+        gap: 0.5rem;
+      }
+      footer .geo span {
+        width: 12px;
+        height: 12px;
+        background: var(--green-soft);
+        display: inline-block;
+      }
+      footer .geo span:nth-child(2) {
+        border-radius: 50%;
+      }
+      footer .geo span:nth-child(3) {
+        clip-path: polygon(50% 0, 0 100%, 100% 100%);
+      }
+
+      /* reveal on scroll */
+      .reveal {
+        opacity: 0;
+        transform: translateY(22px);
+        transition:
+          opacity 0.6s ease,
+          transform 0.6s ease;
+      }
+      .reveal.in {
+        opacity: 1;
+        transform: none;
+      }
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
+        }
+        .reveal {
+          opacity: 1;
+          transform: none;
+          transition: none;
+        }
+        .btn {
+          transition: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <a class="nav-mark" href="#top"><span class="dot"></span>B·R·S</a>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#research">Research</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <header id="top">
+      <div>
+        <p class="hero-eyebrow">Life Sciences Engineering · EPFL</p>
+        <h1>
+          Bruno Raphaël<br />Siniciali<br /><span class="thin"
+            >engineering&nbsp;×&nbsp;neuroscience</span
+          >
+        </h1>
+        <p class="hero-sub">
+          Laidlaw Scholar and aspiring neuroscientist exploring where biology
+          meets engineering — from cognitive neuroscience research to
+          rehabilitation technology.
+        </p>
+        <div class="hero-cta">
+          <a class="btn btn-solid" href="#research">View my work</a>
+          <a class="btn btn-line" href="#contact">Get in touch</a>
+        </div>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <!-- Bauhaus composition: circle, semicircle, triangle, grid -->
+        <svg
+          viewBox="0 0 480 480"
+          xmlns="http://www.w3.org/2000/svg"
+          role="img"
+          aria-label=""
+        >
+          <rect
+            x="40"
+            y="40"
+            width="400"
+            height="400"
+            fill="none"
+            stroke="#C9BFA6"
+            stroke-width="2"
+          />
+          <circle cx="200" cy="200" r="130" fill="#1E4D3B" />
+          <path
+            d="M 200 330 A 130 130 0 0 0 330 200 L 200 200 Z"
+            fill="#0F2E23"
+          />
+          <rect x="300" y="300" width="140" height="140" fill="#DDD3BC" />
+          <polygon points="370,150 460,300 280,300" fill="#3A6B54" />
+          <line
+            x1="40"
+            y1="380"
+            x2="440"
+            y2="380"
+            stroke="#1E4D3B"
+            stroke-width="3"
+          />
+          <circle cx="90" cy="380" r="14" fill="#0F2E23" />
+          <rect x="150" y="366" width="28" height="28" fill="#1E4D3B" />
+        </svg>
+      </div>
+    </header>
+
+    <section id="about">
+      <div class="sec-head reveal">
+        <svg class="sec-shape" viewBox="0 0 22 22">
+          <circle cx="11" cy="11" r="11" fill="#1E4D3B" />
+        </svg>
+        <h2>About</h2>
+        <div class="sec-rule"></div>
+      </div>
+      <div class="about-grid">
+        <div class="reveal">
+          <p>
+            I am a Life Sciences Engineering undergraduate at EPFL, driven by
+            curiosity about how the brain works — and how engineering can help
+            repair it when it doesn't.
+          </p>
+          <p>
+            As a Laidlaw Scholar, I completed a full-time research internship at
+            EPFL's Laboratory of Cognitive Neuroscience, studying how the sense
+            of agency shapes episodic memory. That work now extends into my
+            current internship at Roceso Technologies in Singapore, where I
+            design rehabilitation games for soft-robotic hand therapy devices —
+            turning cognitive neuroscience findings into tools that help stroke
+            patients recover.
+          </p>
+          <p>
+            Earlier experiences shaped the same trajectory from different
+            angles: a hematology internship at Semmelweis University in Budapest
+            showed me the human side of medicine; leading the EPFL Sustainable
+            Innovation Challenge taught me how to build something from nothing
+            with a team; tutoring mathematics, French and philosophy reinforced
+            my conviction that understanding deepens when it is shared.
+          </p>
+          <p>
+            My long-term ambition sits at the intersection of the clinic, the
+            lab and the venture: neurotechnology that reaches patients.
+          </p>
+        </div>
+        <aside class="fact-card reveal">
+          <h3>At a glance</h3>
+          <ul>
+            <li>BSc Life Sciences Engineering, EPFL</li>
+            <li>Laidlaw Scholar — 2025 cohort</li>
+            <li>Exchange year at KTH / Karolinska Institute</li>
+            <li>Currently in Singapore — Roceso Technologies</li>
+            <li>Languages: French, English, German, Hungarian</li>
+            <li>Class delegate & student governance, EPFL</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <section id="research">
+      <div class="sec-head reveal">
+        <svg class="sec-shape" viewBox="0 0 22 22">
+          <rect width="22" height="22" fill="#1E4D3B" />
+        </svg>
+        <h2>Research & Projects</h2>
+        <div class="sec-rule"></div>
+      </div>
+      <div class="proj-grid reveal">
+        <article class="proj">
+          <svg class="proj-shape" viewBox="0 0 26 26">
+            <circle cx="13" cy="13" r="13" fill="#1E4D3B" />
+          </svg>
+          <span class="proj-tag">Cognitive Neuroscience</span>
+          <h3>Sense of Agency & Episodic Memory</h3>
+          <p>
+            Laidlaw research internship at EPFL's Laboratory of Cognitive
+            Neuroscience. I implemented an online experimental application
+            testing whether the feeling of controlling one's actions strengthens
+            episodic memory — contributing to a published finding linking agency
+            and recall.
+          </p>
+        </article>
+        <article class="proj">
+          <svg class="proj-shape" viewBox="0 0 26 26">
+            <rect width="26" height="26" fill="#3A6B54" />
+          </svg>
+          <span class="proj-tag">Rehabilitation Technology</span>
+          <h3>Neurorehabilitation Game Design</h3>
+          <p>
+            At Roceso Technologies, I designed a portfolio of rehabilitation
+            game concepts for a hand-tracking device paired with a soft-robotic
+            glove — grounding game mechanics in agency–memory neuroscience, with
+            clinical rationale, reward-system design and competitive analysis.
+          </p>
+        </article>
+        <article class="proj">
+          <svg class="proj-shape" viewBox="0 0 26 26">
+            <polygon points="13,0 26,26 0,26" fill="#0F2E23" />
+          </svg>
+          <span class="proj-tag">Machine Learning</span>
+          <h3>Computer Vision on Psychiatric Art</h3>
+          <p>
+            Led the deconfounding pipeline in a 48-hour hackathon applying
+            DINOv2 vision transformers to psychiatric patient artworks from the
+            Morgenthaler archive, producing cluster-level findings across
+            diagnoses.
+          </p>
+        </article>
+        <article class="proj">
+          <svg class="proj-shape" viewBox="0 0 26 26">
+            <rect
+              x="3"
+              y="3"
+              width="20"
+              height="20"
+              fill="none"
+              stroke="#1E4D3B"
+              stroke-width="3"
+            />
+          </svg>
+          <span class="proj-tag">Biotechnology</span>
+          <h3>GFI Academic Research Challenge</h3>
+          <p>
+            Participated in the Good Food Institute's Academic Research
+            Challenge, working on microbial strain optimization in an
+            international student team.
+          </p>
+        </article>
+        <article class="proj">
+          <svg class="proj-shape" viewBox="0 0 26 26">
+            <circle
+              cx="13"
+              cy="13"
+              r="11"
+              fill="none"
+              stroke="#3A6B54"
+              stroke-width="3"
+            />
+          </svg>
+          <span class="proj-tag">Leadership</span>
+          <h3>EPFL Sustainable Innovation Challenge</h3>
+          <p>
+            Challenge Team Lead for Europe's first student-led sustainability
+            forum of its kind. Led challenge design and the selection of teams
+            and jurors over 11 months, culminating in an international final at
+            EPFL with a CHF 20,000 prize pool.
+          </p>
+        </article>
+        <article class="proj">
+          <svg class="proj-shape" viewBox="0 0 26 26">
+            <polygon
+              points="0,26 13,0 26,26"
+              fill="none"
+              stroke="#0F2E23"
+              stroke-width="3"
+            />
+          </svg>
+          <span class="proj-tag">Product Concept</span>
+          <h3>Flashcore</h3>
+          <p>
+            A flashcard-app concept for medical and engineering students
+            combining AI-driven card generation with spaced repetition — an
+            ongoing exploration of learning-science-informed tooling.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section id="experience">
+      <div class="sec-head reveal">
+        <svg class="sec-shape" viewBox="0 0 22 22">
+          <polygon points="11,0 22,22 0,22" fill="#3A6B54" />
+        </svg>
+        <h2>Experience</h2>
+        <div class="sec-rule"></div>
+      </div>
+      <div class="timeline">
+        <div class="t-item reveal">
+          <span class="t-date">Jul – Aug 2026 · Singapore</span>
+          <h3>Engineering & Strategy Intern</h3>
+          <p class="t-org">
+            Roceso Technologies — Laidlaw Leadership-in-Action
+          </p>
+          <p>
+            Medical-device internship spanning QMS / ISO 13485 documentation,
+            control-box assembly and firmware flashing, rehabilitation game
+            design for a hand-tracking therapy platform, and market & competitor
+            analysis for international distributors.
+          </p>
+        </div>
+        <div class="t-item reveal">
+          <span class="t-date">2025 – 2026 · Lausanne</span>
+          <h3>Challenge Team Lead</h3>
+          <p class="t-org">EPFL Sustainable Innovation Challenge</p>
+          <p>
+            Designed the competition and led the selection of finalist teams and
+            jurors for an international sustainability innovation forum hosted
+            at EPFL.
+          </p>
+        </div>
+        <div class="t-item reveal">
+          <span class="t-date">Summer 2025 · Geneva</span>
+          <h3>Laidlaw Research Scholar</h3>
+          <p class="t-org">Laboratory of Cognitive Neuroscience, EPFL</p>
+          <p>
+            Eight-week full-time research internship on the EPFL Biotech Campus.
+            Implemented an online behavioural experiment on the sense of agency
+            and episodic memory.
+          </p>
+        </div>
+        <div class="t-item reveal">
+          <span class="t-date">2025 – 2026 · Lausanne</span>
+          <h3>Teaching Assistant & Tutor</h3>
+          <p class="t-org">EPFL</p>
+          <p>
+            Teaching assistant for a first-year biology course; tutor in
+            mathematics, French and philosophy; class delegate in student
+            governance.
+          </p>
+        </div>
+        <div class="t-item reveal">
+          <span class="t-date">Summer 2024 · Budapest</span>
+          <h3>Clinical Intern, Hematology</h3>
+          <p class="t-org">Semmelweis University Hospital</p>
+          <p>
+            Clinical exposure in a university hematology department — an early,
+            formative encounter with the human side of medicine.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="education">
+      <div class="sec-head reveal">
+        <svg class="sec-shape" viewBox="0 0 22 22">
+          <rect
+            x="2"
+            y="2"
+            width="18"
+            height="18"
+            fill="none"
+            stroke="#1E4D3B"
+            stroke-width="3"
+          />
+        </svg>
+        <h2>Education</h2>
+        <div class="sec-rule"></div>
+      </div>
+      <div class="edu-grid">
+        <div class="edu reveal">
+          <span class="t-date">2024 — present</span>
+          <h3>BSc Life Sciences Engineering</h3>
+          <p>
+            École Polytechnique Fédérale de Lausanne (EPFL). Coursework spanning
+            cell & molecular biology, biochemistry, signal processing, numerical
+            analysis, fluid mechanics, machine learning and biostatistics.
+          </p>
+        </div>
+        <div class="edu reveal">
+          <span class="t-date">2026 — 2027</span>
+          <h3>Exchange Year — KTH & Karolinska Institute</h3>
+          <p>
+            Full-year academic exchange in Stockholm focused on medical imaging,
+            machine learning for health, neuroscience and biomedical signal
+            processing.
+          </p>
+        </div>
+        <div class="edu reveal">
+          <span class="t-date">Ambition</span>
+          <h3>Neuro-X & Beyond</h3>
+          <p>
+            Building toward graduate study at the interface of neuroscience,
+            engineering and medicine — and, long-term, a clinician-scientist
+            path in neurotechnology.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="sec-head reveal">
+        <svg class="sec-shape" viewBox="0 0 22 22">
+          <circle
+            cx="11"
+            cy="11"
+            r="9"
+            fill="none"
+            stroke="#1E4D3B"
+            stroke-width="3"
+          />
+        </svg>
+        <h2>Contact</h2>
+        <div class="sec-rule"></div>
+      </div>
+      <p class="contact-lead reveal">
+        Open to conversations about neuroscience, rehabilitation technology,
+        research collaborations and interesting problems in general.
+      </p>
+      <div class="socials reveal">
+        <a class="btn btn-solid" href="mailto:bruno.siniciali@epfl.ch">Email</a>
+        <a
+          class="btn btn-line"
+          href="https://www.linkedin.com/in/bruno-rapha%C3%ABl-siniciali/"
+          target="_blank"
+          rel="noopener"
+          >LinkedIn</a
+        >
+        <a
+          class="btn btn-line"
+          href="https://laidlawscholars.network/"
+          target="_blank"
+          rel="noopener"
+          >Laidlaw Scholars Network</a
+        >
+        <a
+          class="btn btn-line"
+          href="https://people.epfl.ch/bruno.siniciali/?lang=en"
+          target="_blank"
+          rel="noopener"
+          >EPFL Directory</a
+        >
+        <a
+          class="btn btn-line"
+          href="https://github.com/siniciali"
+          target="_blank"
+          rel="noopener"
+          >GitHub</a
+        >
+      </div>
+    </section>
+
+    <footer>
+      <span>© 2026 Bruno Raphaël Siniciali</span>
+      <span class="geo" aria-hidden="true"
+        ><span></span><span></span><span></span
+      ></span>
+      <span>siniciali.com</span>
+    </footer>
+
+    <script>
+      const io = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((e) => {
+            if (e.isIntersecting) {
+              e.target.classList.add("in");
+              io.unobserve(e.target);
+            }
+          });
+        },
+        { threshold: 0.12 },
+      );
+      document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
+    </script>
+  </body>
+</html>
