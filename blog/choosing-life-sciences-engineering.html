@@ -3,9 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>
-      Why I Chose Engineering Over Medical School — Bruno Raphaël Siniciali
-    </title>
+    <title>Why I Chose Engineering Over Medical School — Bruno Raphaël Siniciali</title>
     <meta
       name="description"
       content="A hematology ward in Budapest, a decision between medical school and engineering, and why the answer turned out to be both."
@@ -14,7 +12,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&family=Work+Sans:ital,wght@0,300;0,400;0,500;1,400&display=swap"
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Unbounded:wght@600;700;800;900&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="../assets/style.css" />
@@ -22,9 +20,9 @@
       .nav-toggle {
         display: none;
         background: none;
-        border: 2px solid var(--green);
-        color: var(--green-deep);
-        font-family: "Jost", sans-serif;
+        border: 2px solid var(--ink);
+        color: var(--ink);
+        font-family: "IBM Plex Mono", monospace;
         font-size: 0.9rem;
         padding: 0.4rem 0.7rem;
         cursor: pointer;
@@ -33,7 +31,7 @@
         .nav-toggle {
           display: block;
         }
-        nav ul {
+        .site-nav ul {
           display: none;
           position: absolute;
           top: 100%;
@@ -42,13 +40,13 @@
           flex-direction: column;
           gap: 0;
           background: var(--beige-light);
-          border-bottom: 2px solid var(--green);
+          border-bottom: 3px solid var(--ink);
           padding: 0.5rem 4vw 1rem;
         }
-        nav ul.open {
+        .site-nav ul.open {
           display: flex;
         }
-        nav ul a {
+        .site-nav ul a {
           display: block;
           padding: 0.85rem 0;
           border-bottom: 1px solid var(--line);
@@ -57,10 +55,10 @@
     </style>
   </head>
   <body>
-    <nav>
+    <nav class="site-nav">
       <a class="nav-mark" href="../index.html">
         <img class="nav-bear" src="../assets/bear-logo.png" alt="" />
-        B·R·S</a
+        SINICIALI</a
       >
       <button
         class="nav-toggle"
@@ -74,9 +72,8 @@
       <ul id="navLinks">
         <li><a href="../index.html#about">About</a></li>
         <li><a href="../index.html#research">Research</a></li>
-        <li><a href="../index.html#experience">Experience</a></li>
         <li><a href="../index.html#education">Education</a></li>
-        <li><a href="../index.html#skills">Skills</a></li>
+        <li><a href="../index.html#experience">Experience</a></li>
         <li><a href="../blog.html" class="current">Blog</a></li>
         <li><a href="../index.html#contact">Contact</a></li>
       </ul>
@@ -86,8 +83,8 @@
       <span class="blog-date">July 2026 · Singapore</span>
       <h1>Why I Chose Engineering Over Medical School</h1>
       <p class="post-dek">
-        On a hematology ward in Budapest, and the moment I realised the choice
-        wasn't between medicine and engineering at all.
+        On a hematology ward in Budapest, and the moment I realised the
+        choice wasn't between medicine and engineering at all.
       </p>
     </header>
 
@@ -96,71 +93,74 @@
 
       <p>
         People occasionally ask why, if I'm this interested in medicine, I
-        didn't just go to medical school. It's a fair question, and I've had a
-        few years now — most recently during a quiet stretch of my internship
-        here in Singapore — to sit with the answer.
+        didn't just go to medical school. It's a fair question, and I've had
+        a few years now — most recently during a quiet stretch of my
+        internship here in Singapore — to sit with the answer.
       </p>
 
       <h2>The ward that changed the question</h2>
       <p>
-        In October 2023, I spent fifty-plus hours in the Hematology Department
-        at Semmelweis University Hospital in Budapest, under Prof. Péter Farkas.
-        I measured blood pressure and oxygen levels, helped determine patients'
-        blood types, and watched staff make decisions I hadn't fully appreciated
-        from the outside — like how you prioritise blood transfusions when
-        supply doesn't match demand. I left with a much clearer sense of what
-        medicine actually asks of the people who practice it: long shifts,
-        difficult trade-offs, and a kind of decision-making under pressure that
-        no textbook prepares you for.
+        In October 2023, I spent fifty-plus hours in the Hematology
+        Department at Semmelweis University Hospital in Budapest, under
+        Prof. Péter Farkas. I measured blood pressure and oxygen levels,
+        helped determine patients' blood types, and watched staff make
+        decisions I hadn't fully appreciated from the outside — like how you
+        prioritise blood transfusions when supply doesn't match demand. I
+        left with a much clearer sense of what medicine actually asks of the
+        people who practice it: long shifts, difficult trade-offs, and a
+        kind of decision-making under pressure that no textbook prepares you
+        for.
       </p>
       <p>
-        What stayed with me wasn't just the human side of it, though — it was a
-        more specific, nagging observation. So much of what limits good medicine
-        isn't a lack of clinical judgment. It's a lack of tools: better ways to
-        detect disease earlier, better interfaces between damaged nervous
-        systems and the technology that could support them. The doctors I
-        shadowed were excellent at working within the constraints they had. I
-        kept wondering who was working on loosening those constraints in the
-        first place.
+        What stayed with me wasn't just the human side of it, though — it
+        was a more specific, nagging observation. So much of what limits
+        good medicine isn't a lack of clinical judgment. It's a lack of
+        tools: better ways to detect disease earlier, better interfaces
+        between damaged nervous systems and the technology that could
+        support them. The doctors I shadowed were excellent at working
+        within the constraints they had. I kept wondering who was working on
+        loosening those constraints in the first place.
       </p>
 
       <h2>Choosing the bridge instead of a side</h2>
       <p>
-        That's the real reason I chose Life Sciences Engineering at EPFL over
-        medical school — not because I loved medicine less, but because I wanted
-        to understand both the clinical problem and the technical toolkit deeply
-        enough to actually connect them, rather than specialising into just one
-        half of that bridge. Medical school would have given me the clinical
-        side. A pure engineering degree would have given me the technical side.
-        I wanted both, even if it meant a slower, less conventional path.
+        That's the real reason I chose Life Sciences Engineering at EPFL
+        over medical school — not because I loved medicine less, but because
+        I wanted to understand both the clinical problem and the technical
+        toolkit deeply enough to actually connect them, rather than
+        specialising into just one half of that bridge. Medical school would
+        have given me the clinical side. A pure engineering degree would
+        have given me the technical side. I wanted both, even if it meant a
+        slower, less conventional path.
       </p>
       <p>
-        In practice, that's meant spending a summer in a cognitive neuroscience
-        lab studying the mechanisms behind memory and agency, and now spending
-        part of this year inside a neurorehabilitation robotics company in
-        Singapore, watching how research findings actually turn — or fail to
-        turn — into devices that help someone recover motor function after a
-        stroke. Both sides keep correcting each other. The lab teaches me what's
-        mechanistically true; the engineering side teaches me what's actually
-        buildable and usable by someone in pain, on a deadline, with limited
-        resources.
+        In practice, that's meant spending a summer in a cognitive
+        neuroscience lab studying the mechanisms behind memory and agency,
+        and now spending part of this year inside a neurorehabilitation
+        robotics company in Singapore, watching how research findings
+        actually turn — or fail to turn — into devices that help someone
+        recover motor function after a stroke. Both sides keep correcting
+        each other. The lab teaches me what's mechanistically true; the
+        engineering side teaches me what's actually buildable and usable by
+        someone in pain, on a deadline, with limited resources.
       </p>
 
       <h2>Where it's heading</h2>
       <p>
-        The long-term plan is neurosurgery and neurotechnology, treated as one
-        coherent goal rather than two competing ones — operating on the brain,
-        and building the tools that extend what that operation can do. It's a
-        twenty-year plan, which sounds unreasonable when I say it out loud. I've
-        come to think that's usually a sign the goal is worth having.
+        The long-term plan is neurosurgery and neurotechnology, treated as
+        one coherent goal rather than two competing ones — operating on the
+        brain, and building the tools that extend what that operation can
+        do. It's a twenty-year plan, which sounds unreasonable when I say it
+        out loud. I've come to think that's usually a sign the goal is worth
+        having.
       </p>
       <p>
         I don't know yet exactly what shape that takes — an MD after this
-        degree, a PhD alongside it, some hybrid that doesn't have a clean label
-        yet. But the hematology ward in Budapest is still the clearest answer I
-        have for why I'm on this path at all: I saw what medicine needed, and I
-        wanted to be someone who could actually build it, not just practice
-        within its limits.
+        degree, a PhD alongside it, some hybrid that doesn't have a clean
+        label yet. But the hematology ward in Budapest is still the clearest
+        answer I have for why I'm on this path at all: I saw what medicine
+        needed, and I wanted to be someone who could actually build it, not
+        just practice within its limits.
       </p>
     </article>
 

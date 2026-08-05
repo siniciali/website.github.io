@@ -12,7 +12,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&family=Work+Sans:ital,wght@0,300;0,400;0,500;1,400&display=swap"
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Unbounded:wght@600;700;800;900&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="assets/style.css" />
@@ -20,9 +20,9 @@
       .nav-toggle {
         display: none;
         background: none;
-        border: 2px solid var(--green);
-        color: var(--green-deep);
-        font-family: "Jost", sans-serif;
+        border: 2px solid var(--ink);
+        color: var(--ink);
+        font-family: "IBM Plex Mono", monospace;
         font-size: 0.9rem;
         padding: 0.4rem 0.7rem;
         cursor: pointer;
@@ -31,7 +31,7 @@
         .nav-toggle {
           display: block;
         }
-        nav ul {
+        .site-nav ul {
           display: none;
           position: absolute;
           top: 100%;
@@ -40,13 +40,13 @@
           flex-direction: column;
           gap: 0;
           background: var(--beige-light);
-          border-bottom: 2px solid var(--green);
+          border-bottom: 3px solid var(--ink);
           padding: 0.5rem 4vw 1rem;
         }
-        nav ul.open {
+        .site-nav ul.open {
           display: flex;
         }
-        nav ul a {
+        .site-nav ul a {
           display: block;
           padding: 0.85rem 0;
           border-bottom: 1px solid var(--line);
@@ -55,10 +55,10 @@
     </style>
   </head>
   <body>
-    <nav>
+    <nav class="site-nav">
       <a class="nav-mark" href="#top">
         <img class="nav-bear" src="assets/bear-logo.png" alt="" />
-        B·R·S</a
+        SINICIALI</a
       >
       <button
         class="nav-toggle"
@@ -72,86 +72,128 @@
       <ul id="navLinks">
         <li><a href="#about">About</a></li>
         <li><a href="#research">Research</a></li>
-        <li><a href="#experience">Experience</a></li>
         <li><a href="#education">Education</a></li>
-        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
         <li><a href="blog.html">Blog</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
 
-    <header class="hero" id="top">
-      <div>
-        <p class="hero-eyebrow">EPFL · Laidlaw Scholar · Budapest → Lausanne → Singapore</p>
-        <h1>
-          Bruno Raphaël<br />Siniciali<br /><span class="thin"
-            >neurotech&nbsp;×&nbsp;medicine</span
-          >
-        </h1>
-        <p class="hero-sub">
-          Life Sciences Engineering student at EPFL, somewhere between two
-          paths I love — medicine and neuroscience — and slowly figuring out
-          that the answer might just be both.
-        </p>
-        <blockquote class="hero-quote">
-          “What is left over if I subtract the fact that my arm goes up from
-          the fact that I raise my arm?”
-          <cite>Ludwig Wittgenstein — epigraph of my LNCO research report</cite>
-        </blockquote>
-        <div class="hero-cta">
-          <a class="btn btn-solid" href="#research">View my work</a>
-          <a class="btn btn-line" href="blog.html">Read the blog</a>
-          <a class="btn btn-line" href="#contact">Get in touch</a>
-        </div>
-      </div>
-      <div class="hero-art" aria-hidden="true">
-        <!-- Personal logo: a polar bear with a brain, set in a Bauhaus frame -->
-        <svg
-          viewBox="0 0 480 480"
-          xmlns="http://www.w3.org/2000/svg"
-          role="img"
-          aria-label="Personal logo: a polar bear with a brain"
+    <header class="masthead" id="top">
+      <p class="eyebrow">
+        46.5197°N 6.5657°E — EPFL, LAUSANNE · BUDAPEST · SINGAPORE ·
+        STOCKHOLM
+      </p>
+      <h1 class="masthead-name">
+        Bruno Raphaël<br />Siniciali<span class="thin"
+          >neurotech&nbsp;×&nbsp;medicine</span
         >
-          <rect
-            x="40"
-            y="40"
-            width="400"
-            height="400"
-            fill="none"
-            stroke="#C9BFA6"
-            stroke-width="2"
-          />
-          <circle cx="150" cy="152" r="98" fill="#DDD3BC" />
-          <polygon points="412,412 336,412 412,336" fill="#3A6B54" />
-          <line
-            x1="40"
-            y1="402"
-            x2="440"
-            y2="402"
-            stroke="#1E4D3B"
-            stroke-width="3"
-          />
-          <image
-            href="assets/bear-logo.png"
-            x="66"
-            y="192"
-            width="342"
-            height="210"
-            preserveAspectRatio="xMidYMid meet"
-          />
-        </svg>
+      </h1>
+      <div class="masthead-grid">
+        <div>
+          <p class="masthead-sub">
+            Life Sciences Engineering student at EPFL, somewhere between two
+            paths I love — medicine and neuroscience — and slowly figuring
+            out that the answer might just be both.
+          </p>
+          <blockquote class="masthead-quote">
+            “What is left over if I subtract the fact that my arm goes up
+            from the fact that I raise my arm?”
+            <cite>Ludwig Wittgenstein — epigraph of my LNCO research report</cite>
+          </blockquote>
+          <div class="masthead-cta">
+            <a class="btn btn-solid" href="#research">View my work</a>
+            <a class="btn btn-line" href="blog.html">Read the blog</a>
+            <a class="btn btn-line" href="#contact">Get in touch</a>
+          </div>
+        </div>
+
+        <nav class="legend reveal" aria-label="Site colour key">
+          <a class="legend-item" data-c="yellow" href="#research">
+            <svg class="legend-shape" viewBox="0 0 44 44" aria-hidden="true">
+              <polygon points="22,4 40,38 4,38" fill="#bd8b12" />
+            </svg>
+            <span class="legend-text">
+              <span class="legend-label">Yellow · Triangle</span>
+              <h4>Research — the spark</h4>
+            </span>
+          </a>
+          <a class="legend-item" data-c="red" href="#education">
+            <svg class="legend-shape" viewBox="0 0 44 44" aria-hidden="true">
+              <rect x="5" y="5" width="34" height="34" fill="#832a2a" />
+            </svg>
+            <span class="legend-text">
+              <span class="legend-label">Red · Square</span>
+              <h4>Education — the foundation</h4>
+            </span>
+          </a>
+          <a class="legend-item" data-c="blue" href="#experience">
+            <svg class="legend-shape" viewBox="0 0 44 44" aria-hidden="true">
+              <circle cx="22" cy="22" r="17" fill="#1f4770" />
+            </svg>
+            <span class="legend-text">
+              <span class="legend-label">Blue · Circle</span>
+              <h4>Experience — the practice</h4>
+            </span>
+          </a>
+        </nav>
       </div>
     </header>
 
-    <section id="about">
+    <section id="manifesto" style="padding-top: 1rem">
       <div class="sec-head reveal">
-        <svg class="sec-shape" viewBox="0 0 22 22">
-          <circle cx="11" cy="11" r="11" fill="#1E4D3B" />
-        </svg>
-        <h2>About</h2>
+        <span class="sec-index">FIG. 01</span>
+        <h2>A Note on Colour</h2>
         <div class="sec-rule"></div>
       </div>
       <div class="about-grid">
+        <div class="reveal">
+          <p>
+            Long before software had a design system, the Bauhaus had one. In
+            Johannes Itten's preliminary course, every student learned that a
+            triangle is yellow, a square is red, a circle is blue — not as
+            decoration, but as a claim that form and colour carry meaning on
+            their own, before a single word is added. Kassák Lajos ran the
+            same argument through Vienna and Budapest with his journal
+            <em>MA</em>. Farkas Molnár carried it into Hungarian
+            architecture. Marcel Breuer, another Hungarian, carried it into
+            furniture and then into buildings.
+          </p>
+          <p>
+            I grew up on the Hungarian side of that lineage, and I'm building
+            an engineering career on the Swiss side of it — in the city
+            where Le Corbusier once tried to reduce architecture to
+            proportion and number. So this site borrows their alphabet.
+            Yellow is the triangle: the sharpest shape for the sharpest
+            moment, research, the instant a hypothesis clicks into place.
+            Red is the square: weight and material, education, a foundation
+            poured one course at a time. Blue is the circle: motion without
+            end, experience, the discipline of returning to the same problem
+            until it becomes second nature. Green is the ground everything
+            else grows out of, and beige is the paper it's all written on.
+          </p>
+        </div>
+        <aside class="fact-card reveal">
+          <h3>At a glance</h3>
+          <ul>
+            <li>BSc Life Sciences Engineering, EPFL — 5.3/6</li>
+            <li>Laidlaw Scholar — 2025 cohort</li>
+            <li>Exchange: KTH Stockholm & Karolinska Institute</li>
+            <li>Currently in Singapore — Roceso Technologies</li>
+            <li>Quadrilingual: French, English, German, Hungarian</li>
+            <li>Baccalauréat valedictorian — 19.24/20</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <section id="about" style="padding-top: 0">
+      <div class="sec-head reveal">
+        <span class="sec-index">FIG. 02</span>
+        <h2>About</h2>
+        <div class="sec-rule"></div>
+      </div>
+      <div class="about-grid" style="grid-template-columns: 1fr">
         <div class="reveal">
           <p>
             I'm a Life Sciences Engineering student at EPFL, somewhere between
@@ -193,32 +235,27 @@
             that don't have clean answers yet.
           </p>
         </div>
-        <aside class="fact-card reveal">
-          <h3>At a glance</h3>
-          <ul>
-            <li>BSc Life Sciences Engineering, EPFL — 5.3/6</li>
-            <li>Laidlaw Scholar — 2025 cohort</li>
-            <li>Exchange: KTH Stockholm & Karolinska Institute</li>
-            <li>Currently in Singapore — Roceso Technologies</li>
-            <li>Quadrilingual: French, English, German, Hungarian</li>
-            <li>Baccalauréat valedictorian — 19.24/20</li>
-          </ul>
-        </aside>
       </div>
     </section>
 
+    <div class="chapter chapter-yellow">
+      <p class="eyebrow">Fig. 03 — Yellow · Triangle</p>
+      <h3 class="reveal">The Spark</h3>
+      <p class="reveal">
+        Research & Projects — the instant a hypothesis clicks into place.
+      </p>
+    </div>
+
     <section id="research">
       <div class="sec-head reveal">
-        <svg class="sec-shape" viewBox="0 0 22 22">
-          <rect width="22" height="22" fill="#1E4D3B" />
-        </svg>
+        <span class="sec-index">FIG. 03</span>
         <h2>Research & Projects</h2>
         <div class="sec-rule"></div>
       </div>
       <div class="proj-grid reveal">
         <article class="proj">
-          <svg class="proj-shape" viewBox="0 0 26 26">
-            <circle cx="13" cy="13" r="13" fill="#1E4D3B" />
+          <svg class="proj-shape" viewBox="0 0 22 22">
+            <polygon points="11,2 20,20 2,20" fill="#bd8b12" />
           </svg>
           <span class="proj-tag">Cognitive Neuroscience</span>
           <h3>Sense of Agency & Episodic Memory</h3>
@@ -238,8 +275,8 @@
           >
         </article>
         <article class="proj">
-          <svg class="proj-shape" viewBox="0 0 26 26">
-            <rect width="26" height="26" fill="#3A6B54" />
+          <svg class="proj-shape" viewBox="0 0 22 22">
+            <rect x="3" y="3" width="16" height="16" fill="#bd8b12" />
           </svg>
           <span class="proj-tag">Rehabilitation Robotics</span>
           <h3>Neurorehabilitation Robotics</h3>
@@ -251,8 +288,8 @@
           </p>
         </article>
         <article class="proj">
-          <svg class="proj-shape" viewBox="0 0 26 26">
-            <polygon points="13,0 26,26 0,26" fill="#0F2E23" />
+          <svg class="proj-shape" viewBox="0 0 22 22">
+            <circle cx="11" cy="11" r="9" fill="#bd8b12" />
           </svg>
           <span class="proj-tag">Machine Learning</span>
           <h3>Computer Vision on Psychiatric Art</h3>
@@ -265,14 +302,12 @@
           </p>
         </article>
         <article class="proj">
-          <svg class="proj-shape" viewBox="0 0 26 26">
-            <circle
-              cx="13"
-              cy="13"
-              r="11"
+          <svg class="proj-shape" viewBox="0 0 22 22">
+            <polygon
+              points="11,2 20,20 2,20"
               fill="none"
-              stroke="#3A6B54"
-              stroke-width="3"
+              stroke="#bd8b12"
+              stroke-width="2.5"
             />
           </svg>
           <span class="proj-tag">Leadership</span>
@@ -289,15 +324,15 @@
           >
         </article>
         <article class="proj">
-          <svg class="proj-shape" viewBox="0 0 26 26">
+          <svg class="proj-shape" viewBox="0 0 22 22">
             <rect
               x="3"
               y="3"
-              width="20"
-              height="20"
+              width="16"
+              height="16"
               fill="none"
-              stroke="#1E4D3B"
-              stroke-width="3"
+              stroke="#bd8b12"
+              stroke-width="2.5"
             />
           </svg>
           <span class="proj-tag">Neural Networks</span>
@@ -310,12 +345,14 @@
           </p>
         </article>
         <article class="proj">
-          <svg class="proj-shape" viewBox="0 0 26 26">
-            <polygon
-              points="0,26 13,0 26,26"
+          <svg class="proj-shape" viewBox="0 0 22 22">
+            <circle
+              cx="11"
+              cy="11"
+              r="9"
               fill="none"
-              stroke="#0F2E23"
-              stroke-width="3"
+              stroke="#bd8b12"
+              stroke-width="2.5"
             />
           </svg>
           <span class="proj-tag">Software · C++</span>
@@ -337,11 +374,72 @@
       </div>
     </section>
 
+    <div class="chapter chapter-red">
+      <p class="eyebrow">Fig. 04 — Red · Square</p>
+      <h3 class="reveal">The Foundation</h3>
+      <p class="reveal">Education — a foundation poured one course at a time.</p>
+    </div>
+
+    <section id="education">
+      <div class="sec-head reveal">
+        <span class="sec-index">FIG. 04</span>
+        <h2>Education</h2>
+        <div class="sec-rule"></div>
+      </div>
+      <div class="edu-grid">
+        <div class="edu reveal">
+          <span class="t-date">2024 — 2027</span>
+          <h3>BSc Life Sciences Engineering</h3>
+          <p>
+            École Polytechnique Fédérale de Lausanne (EPFL). Grade 5.3/6.
+            Coursework spanning cell & molecular biology, biochemistry, signal
+            processing, numerical analysis, machine learning and
+            biostatistics.
+          </p>
+        </div>
+        <div class="edu reveal">
+          <span class="t-date">2026 — 2027</span>
+          <h3>Exchange Year — KTH & Karolinska Institute</h3>
+          <p>
+            Full-year academic exchange in Stockholm focused on medical
+            engineering, machine learning for health, neuroscience and
+            biomedical signal processing.
+          </p>
+        </div>
+        <div class="edu reveal">
+          <span class="t-date">2025 — 2026</span>
+          <h3>Oxford Character Project — Ethical Leadership</h3>
+          <p>
+            Leadership programme delivered by the University of Oxford as part
+            of the Laidlaw Scholarship, developing ethical, self-aware and
+            values-driven leadership through reflective practice.
+          </p>
+        </div>
+        <div class="edu reveal">
+          <span class="t-date">2018 — 2024</span>
+          <h3>Baccalauréat Général — Lycée Gustave Eiffel, Budapest</h3>
+          <p>
+            Valedictorian with highest honours (19.24/20), "mention très bien
+            avec les félicitations du jury". Student-council representative
+            and eco-delegate; two years of MATh.en.JEANS mathematical
+            research.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <div class="chapter chapter-blue">
+      <p class="eyebrow">Fig. 05 — Blue · Circle</p>
+      <h3 class="reveal">The Practice</h3>
+      <p class="reveal">
+        Experience — the discipline of returning to the same problem until
+        it becomes second nature.
+      </p>
+    </div>
+
     <section id="experience">
       <div class="sec-head reveal">
-        <svg class="sec-shape" viewBox="0 0 22 22">
-          <polygon points="11,0 22,22 0,22" fill="#3A6B54" />
-        </svg>
+        <span class="sec-index">FIG. 05</span>
         <h2>Experience</h2>
         <div class="sec-rule"></div>
       </div>
@@ -427,178 +525,9 @@
       </div>
     </section>
 
-    <section id="education">
-      <div class="sec-head reveal">
-        <svg class="sec-shape" viewBox="0 0 22 22">
-          <rect
-            x="2"
-            y="2"
-            width="18"
-            height="18"
-            fill="none"
-            stroke="#1E4D3B"
-            stroke-width="3"
-          />
-        </svg>
-        <h2>Education</h2>
-        <div class="sec-rule"></div>
-      </div>
-      <div class="edu-grid">
-        <div class="edu reveal">
-          <span class="t-date">2024 — 2027</span>
-          <h3>BSc Life Sciences Engineering</h3>
-          <p>
-            École Polytechnique Fédérale de Lausanne (EPFL). Grade 5.3/6.
-            Coursework spanning cell & molecular biology, biochemistry, signal
-            processing, numerical analysis, machine learning and
-            biostatistics.
-          </p>
-        </div>
-        <div class="edu reveal">
-          <span class="t-date">2026 — 2027</span>
-          <h3>Exchange Year — KTH & Karolinska Institute</h3>
-          <p>
-            Full-year academic exchange in Stockholm focused on medical
-            engineering, machine learning for health, neuroscience and
-            biomedical signal processing.
-          </p>
-        </div>
-        <div class="edu reveal">
-          <span class="t-date">2025 — 2026</span>
-          <h3>Oxford Character Project — Ethical Leadership</h3>
-          <p>
-            Leadership programme delivered by the University of Oxford as part
-            of the Laidlaw Scholarship, developing ethical, self-aware and
-            values-driven leadership through reflective practice.
-          </p>
-        </div>
-        <div class="edu reveal">
-          <span class="t-date">2018 — 2024</span>
-          <h3>Baccalauréat Général — Lycée Gustave Eiffel, Budapest</h3>
-          <p>
-            Valedictorian with highest honours (19.24/20), "mention très bien
-            avec les félicitations du jury". Student-council representative
-            and eco-delegate; two years of MATh.en.JEANS mathematical
-            research.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section id="skills">
-      <div class="sec-head reveal">
-        <svg class="sec-shape" viewBox="0 0 22 22">
-          <polygon points="11,0 22,22 0,22" fill="#1E4D3B" />
-        </svg>
-        <h2>Skills & Languages</h2>
-        <div class="sec-rule"></div>
-      </div>
-      <div class="skills-layout">
-        <div class="reveal">
-          <div class="skill-block">
-            <h3>Research & Technical</h3>
-            <div class="pill-row">
-              <span class="pill">Python</span>
-              <span class="pill">JavaScript</span>
-              <span class="pill">TypeScript</span>
-              <span class="pill">C++</span>
-              <span class="pill">Neural Networks</span>
-              <span class="pill">UMAP</span>
-              <span class="pill">PCA</span>
-              <span class="pill">Object-Oriented Programming</span>
-              <span class="pill">Biostatistics</span>
-              <span class="pill">Experimental Design</span>
-            </div>
-          </div>
-          <div class="skill-block">
-            <h3>Leadership & Communication</h3>
-            <div class="pill-row">
-              <span class="pill">Leadership</span>
-              <span class="pill">Ethical Leadership</span>
-              <span class="pill">Event Planning</span>
-              <span class="pill">Communication</span>
-              <span class="pill">Emotional Intelligence</span>
-              <span class="pill">Teaching & Tutoring</span>
-              <span class="pill">Project Management</span>
-            </div>
-          </div>
-          <div class="skill-block">
-            <h3>Certifications</h3>
-            <div class="cert-grid">
-              <div class="cert">
-                <span class="cert-org">Meta · Coursera</span>
-                <h4>Programming with JavaScript</h4>
-                <p>Issued Aug 2025 — JavaScript, Object-Oriented Programming</p>
-              </div>
-              <div class="cert">
-                <span class="cert-org">Cambridge Assessment</span>
-                <h4>C1 Advanced — English</h4>
-                <p>Issued Oct 2022</p>
-              </div>
-              <div class="cert">
-                <span class="cert-org">Goethe-Institut Budapest</span>
-                <h4>Goethe-Zertifikat C1 — German</h4>
-                <p>Issued May 2024</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="reveal">
-          <div class="skill-block">
-            <h3>Languages</h3>
-            <div class="lang-grid">
-              <div class="lang-item">
-                <span class="lang-name">French</span>
-                <span class="lang-bar"><span style="width: 100%"></span></span>
-                <span class="lang-level">Native / bilingual</span>
-              </div>
-              <div class="lang-item">
-                <span class="lang-name">English</span>
-                <span class="lang-bar"><span style="width: 100%"></span></span>
-                <span class="lang-level">Native / bilingual</span>
-              </div>
-              <div class="lang-item">
-                <span class="lang-name">Hungarian</span>
-                <span class="lang-bar"><span style="width: 100%"></span></span>
-                <span class="lang-level">Native / bilingual</span>
-              </div>
-              <div class="lang-item">
-                <span class="lang-name">German</span>
-                <span class="lang-bar"><span style="width: 85%"></span></span>
-                <span class="lang-level">Full professional</span>
-              </div>
-              <div class="lang-item">
-                <span class="lang-name">Italian</span>
-                <span class="lang-bar"><span style="width: 45%"></span></span>
-                <span class="lang-level">Limited working</span>
-              </div>
-              <div class="lang-item">
-                <span class="lang-name">Swedish</span>
-                <span class="lang-bar"><span style="width: 25%"></span></span>
-                <span class="lang-level">Elementary</span>
-              </div>
-            </div>
-            <p style="margin-top: 0.9rem; font-size: 0.82rem; font-weight: 300; color: var(--green-soft)">
-              Currently building up Swedish ahead of my KTH exchange —
-              Duolingo score 14 as of June 2026.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <section id="honors">
       <div class="sec-head reveal">
-        <svg class="sec-shape" viewBox="0 0 22 22">
-          <circle
-            cx="11"
-            cy="11"
-            r="9"
-            fill="none"
-            stroke="#1E4D3B"
-            stroke-width="3"
-          />
-        </svg>
+        <span class="sec-index">FIG. 06</span>
         <h2>Honors & Involvement</h2>
         <div class="sec-rule"></div>
       </div>
@@ -686,9 +615,7 @@
 
     <section id="blog-teaser">
       <div class="sec-head reveal">
-        <svg class="sec-shape" viewBox="0 0 22 22">
-          <rect width="22" height="22" fill="#DDD3BC" />
-        </svg>
+        <span class="sec-index" style="color: #9dbfa9">FIG. 07</span>
         <h2>From the Blog</h2>
         <div class="sec-rule"></div>
       </div>
@@ -727,25 +654,14 @@
           <span class="blog-more">Read more →</span>
         </a>
       </div>
-      <div class="hero-cta reveal" style="margin-top: 2.4rem">
-        <a class="btn btn-line" href="blog.html" style="border-color: var(--green-soft); color: var(--beige-light)"
-          >View all posts</a
-        >
+      <div class="masthead-cta reveal" style="margin-top: 2.4rem">
+        <a class="btn btn-line" href="blog.html">View all posts</a>
       </div>
     </section>
 
     <section id="contact">
       <div class="sec-head reveal">
-        <svg class="sec-shape" viewBox="0 0 22 22">
-          <circle
-            cx="11"
-            cy="11"
-            r="9"
-            fill="none"
-            stroke="#1E4D3B"
-            stroke-width="3"
-          />
-        </svg>
+        <span class="sec-index">FIG. 08</span>
         <h2>Contact</h2>
         <div class="sec-rule"></div>
       </div>

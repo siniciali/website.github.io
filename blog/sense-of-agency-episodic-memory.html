@@ -12,7 +12,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&family=Work+Sans:ital,wght@0,300;0,400;0,500;1,400&display=swap"
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Unbounded:wght@600;700;800;900&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="../assets/style.css" />
@@ -20,9 +20,9 @@
       .nav-toggle {
         display: none;
         background: none;
-        border: 2px solid var(--green);
-        color: var(--green-deep);
-        font-family: "Jost", sans-serif;
+        border: 2px solid var(--ink);
+        color: var(--ink);
+        font-family: "IBM Plex Mono", monospace;
         font-size: 0.9rem;
         padding: 0.4rem 0.7rem;
         cursor: pointer;
@@ -31,7 +31,7 @@
         .nav-toggle {
           display: block;
         }
-        nav ul {
+        .site-nav ul {
           display: none;
           position: absolute;
           top: 100%;
@@ -40,13 +40,13 @@
           flex-direction: column;
           gap: 0;
           background: var(--beige-light);
-          border-bottom: 2px solid var(--green);
+          border-bottom: 3px solid var(--ink);
           padding: 0.5rem 4vw 1rem;
         }
-        nav ul.open {
+        .site-nav ul.open {
           display: flex;
         }
-        nav ul a {
+        .site-nav ul a {
           display: block;
           padding: 0.85rem 0;
           border-bottom: 1px solid var(--line);
@@ -55,10 +55,10 @@
     </style>
   </head>
   <body>
-    <nav>
+    <nav class="site-nav">
       <a class="nav-mark" href="../index.html">
         <img class="nav-bear" src="../assets/bear-logo.png" alt="" />
-        B·R·S</a
+        SINICIALI</a
       >
       <button
         class="nav-toggle"
@@ -72,9 +72,8 @@
       <ul id="navLinks">
         <li><a href="../index.html#about">About</a></li>
         <li><a href="../index.html#research">Research</a></li>
-        <li><a href="../index.html#experience">Experience</a></li>
         <li><a href="../index.html#education">Education</a></li>
-        <li><a href="../index.html#skills">Skills</a></li>
+        <li><a href="../index.html#experience">Experience</a></li>
         <li><a href="../blog.html" class="current">Blog</a></li>
         <li><a href="../index.html#contact">Contact</a></li>
       </ul>
