@@ -3,16 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Writing — Bruno Raphaël Siniciali</title>
+    <title>Writing · Bruno Siniciali</title>
     <meta
       name="description"
-      content="Notes from Bruno Raphaël Siniciali on neuroscience research, rehabilitation robotics and leadership — from EPFL's LNCO to Roceso Technologies in Singapore."
+      content="Notes from Bruno Siniciali on neuroscience research, rehabilitation robotics and leadership, from EPFL's LNCO to Roceso Technologies in Singapore."
     />
     <link rel="icon" type="image/png" href="assets/favicon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=IBM+Plex+Mono:wght@400;500&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=IBM+Plex+Mono:wght@400;500&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="assets/style.css" />
@@ -33,6 +33,7 @@
         ☰
       </button>
       <ul id="navLinks">
+        <li><a href="index.html#bear">The bear</a></li>
         <li><a href="index.html#about">About</a></li>
         <li><a href="index.html#research">Research</a></li>
         <li><a href="index.html#education">Education</a></li>
@@ -42,16 +43,19 @@
       </ul>
     </nav>
 
+    <div class="walk" aria-hidden="true">
+      <span class="walk-track"></span>
+      <span class="walk-fill" id="walkFill"></span>
+      <img class="walk-bear" id="walkBear" src="assets/bear-logo.png" alt="" />
+    </div>
+
     <header class="page-head">
       <div class="container">
         <span class="sec-bar rise d1"></span>
-        <h1 class="rise d2">
-          Notes from the lab, the clinic and everywhere in between.
-        </h1>
+        <h1 class="rise d2">Things I have written.</h1>
         <p class="lead rise d3">
-          Longer-form reflections on research, leadership and the slow build
-          toward neurosurgery and neurotechnology — written as I go, not
-          polished after the fact.
+          Longer pieces on research, leadership and the slow build toward
+          the brain. Written as I go, not polished after the fact.
         </p>
       </div>
     </header>
@@ -61,10 +65,10 @@
         <div class="writing-grid reveal">
           <a class="post-card" href="blog/choosing-life-sciences-engineering.html">
             <span class="when">July 2026 · Singapore</span>
-            <h3>Why I Chose Engineering Over Medical School</h3>
+            <h3>Why I did not go to medical school</h3>
             <p>
-              On the hematology ward in Budapest that convinced me the answer
-              wasn't medicine or engineering — it was both.
+              I meant to become an anthropologist. How that turned into life
+              sciences engineering, and why it was never really a choice.
             </p>
             <span class="more">Read</span>
           </a>
@@ -72,19 +76,18 @@
             <span class="when">May 2026 · Lausanne</span>
             <h3>Leading the EPFL Sustainable Innovation Challenge</h3>
             <p>
-              Eleven months of building a challenge from scratch, eight
-              finalist teams, and what I learned about the gaps that let ideas
-              scale.
+              Eleven months of preparation, eight finalist teams from four
+              countries, and two days that made all of it worth it.
             </p>
             <span class="more">Read</span>
           </a>
           <a class="post-card" href="blog/sense-of-agency-episodic-memory.html">
             <span class="when">September 2025 · Geneva</span>
-            <h3>Investigating Sense of Agency &amp; Episodic Memory</h3>
+            <h3>Investigating sense of agency and episodic memory</h3>
             <p>
-              Inside my Laidlaw summer at EPFL's LNCO: building an online
-              experiment, wrestling with AI-assisted coding, and what the data
-              is starting to show.
+              Eight weeks at EPFL's LNCO building the experiment, what the
+              earlier data shows, and the summer I lost my own sense of
+              agency while studying it.
             </p>
             <span class="more">Read</span>
           </a>
@@ -94,7 +97,7 @@
 
     <footer>
       <div class="container">
-        <span>© 2026 Bruno Raphaël Siniciali</span>
+        <span>© 2026 Bruno Siniciali</span>
         <span class="geo" aria-hidden="true"
           ><span></span><span></span><span></span
         ></span>
@@ -103,21 +106,6 @@
     </footer>
 
     <script src="assets/site.js"></script>
-    <script>
-      const navToggle = document.getElementById("navToggle");
-      const navLinks = document.getElementById("navLinks");
-      if (navToggle && navLinks) {
-        navToggle.addEventListener("click", () => {
-          const open = navLinks.classList.toggle("open");
-          navToggle.setAttribute("aria-expanded", open ? "true" : "false");
-        });
-        navLinks.querySelectorAll("a").forEach((a) =>
-          a.addEventListener("click", () => {
-            navLinks.classList.remove("open");
-            navToggle.setAttribute("aria-expanded", "false");
-          }),
-        );
-      }
-    </script>
   </body>
 </html>
+
