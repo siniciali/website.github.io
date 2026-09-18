@@ -5,9 +5,9 @@
    ========================================================= */
 
 :root {
-  --paper: #f0eadc;
-  --paper-2: #f7f2e7;
-  --paper-3: #e3d9c4;
+  --paper: #e4e3dd;
+  --paper-2: #edece8;
+  --paper-3: #d2d1c9;
 
   --ink: #17140f;
   --ink-2: #4a4237;
@@ -639,6 +639,11 @@ h2 {
   font-size: 0.92rem;
   line-height: 1.62;
   color: var(--ink-2);
+}
+.asof {
+  color: var(--ink-3);
+  font-size: 0.85em;
+  white-space: nowrap;
 }
 
 /* ---------- experience ---------- */
