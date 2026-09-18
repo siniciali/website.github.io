@@ -1,7 +1,7 @@
 /* =========================================================
-   Bruno Raphaël Siniciali — visual system
-   Bauhaus colour/shape grammar · Hungarian constructivism ·
-   Italian rationalism · weather-chart linework
+   Bruno Siniciali
+   Bauhaus colour and shape grammar, weather-chart linework,
+   and a bear who has not decided yet.
    ========================================================= */
 
 :root {
@@ -19,7 +19,6 @@
   --green: #13483a;
   --green-2: #0b2c23;
   --red: #8b2e27;
-  --red-2: #5e1d18;
   --blue: #1b3f63;
   --blue-2: #11293f;
   --gold: #b0821f;
@@ -33,6 +32,7 @@
   --mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
 
   --pad-y: clamp(5rem, 11vw, 9.5rem);
+  --nav-h: 62px;
 }
 
 *,
@@ -73,10 +73,28 @@ a {
   width: min(1180px, 100% - clamp(2rem, 8vw, 6rem));
   margin-inline: auto;
 }
+:target,
+section[id],
+header[id] {
+  scroll-margin-top: 96px;
+}
 
-/* ---------- type primitives ---------- */
+/* ---------- type ---------- */
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 800;
+  font-stretch: 118%;
+  letter-spacing: -0.022em;
+  line-height: 1.05;
+  text-wrap: balance;
+}
+h2 {
+  font-size: clamp(1.85rem, 3.9vw, 2.9rem);
+}
 .sec-bar {
-  width: 68px;
+  width: 64px;
   height: 5px;
   background: var(--accent);
 }
@@ -93,23 +111,27 @@ a {
 }
 .origins {
   flex-wrap: wrap;
-  gap: 0.35rem 1.5rem;
+  gap: 0.35rem 1.4rem;
   color: var(--ink-3);
 }
 .origins span {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
+  white-space: nowrap;
 }
 .origins span::before {
   content: "";
   width: 7px;
   height: 7px;
   flex: none;
-  background: var(--gold);
+  background: var(--red);
 }
-.origins span:last-child::before {
+.origins span:nth-child(2)::before {
   background: var(--green);
+}
+.origins span:nth-child(3)::before {
+  background: var(--blue);
   border-radius: 50%;
 }
 .glyph {
@@ -124,23 +146,11 @@ a {
 .glyph-tri {
   clip-path: polygon(50% 0, 100% 100%, 0 100%);
 }
-h1,
-h2,
-h3,
-h4 {
-  font-weight: 800;
-  letter-spacing: -0.03em;
-  line-height: 1.06;
-  text-wrap: balance;
-}
-h2 {
-  font-size: clamp(1.9rem, 4vw, 3rem);
-}
 .lead {
   font-size: clamp(1.08rem, 1.5vw, 1.28rem);
-  line-height: 1.62;
+  line-height: 1.6;
   color: var(--ink-2);
-  max-width: 40ch;
+  max-width: 42ch;
 }
 .prose p {
   color: var(--ink-2);
@@ -159,8 +169,8 @@ h2 {
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-  padding: 0.85rem clamp(1rem, 4vw, 3rem);
-  background: color-mix(in srgb, var(--paper) 82%, transparent);
+  padding: 0.8rem clamp(1rem, 4vw, 3rem);
+  background: color-mix(in srgb, var(--paper) 84%, transparent);
   backdrop-filter: saturate(180%) blur(14px);
   -webkit-backdrop-filter: saturate(180%) blur(14px);
   border-bottom: 1px solid var(--hair);
@@ -170,8 +180,9 @@ h2 {
   align-items: center;
   gap: 0.55rem;
   font-weight: 700;
+  font-stretch: 112%;
   font-size: 0.95rem;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.015em;
   text-decoration: none;
   color: var(--ink);
 }
@@ -186,7 +197,7 @@ h2 {
 }
 .site-nav ul a {
   display: block;
-  padding: 0.45rem 0.8rem;
+  padding: 0.45rem 0.75rem;
   font-size: 0.85rem;
   font-weight: 500;
   color: var(--ink-2);
@@ -212,11 +223,51 @@ h2 {
 }
 .site-nav ul a[href*="about"]:hover,
 .site-nav ul a[href*="contact"]:hover,
-.site-nav ul a[href*="blog"]:hover {
+.site-nav ul a[href*="blog"]:hover,
+.site-nav ul a[href*="bear"]:hover {
   border-color: var(--green);
 }
 .nav-toggle {
   display: none;
+}
+
+/* ---------- the bear walks as you scroll ---------- */
+.walk {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: var(--nav-h);
+  height: 26px;
+  z-index: 99;
+  pointer-events: none;
+}
+.walk-track {
+  position: absolute;
+  inset: auto 0 0 0;
+  height: 2px;
+  background: var(--hair);
+}
+.walk-fill {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 0;
+  background: linear-gradient(
+    90deg,
+    var(--gold),
+    var(--red) 38%,
+    var(--blue) 68%,
+    var(--green)
+  );
+}
+.walk-bear {
+  position: absolute;
+  bottom: 1px;
+  left: 0;
+  width: 30px;
+  transform: translateX(0);
+  will-change: transform;
 }
 
 /* ---------- buttons ---------- */
@@ -224,7 +275,7 @@ h2 {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  padding: 0.78rem 1.4rem;
+  padding: 0.8rem 1.45rem;
   font-family: var(--sans);
   font-size: 0.9rem;
   font-weight: 600;
@@ -251,7 +302,7 @@ h2 {
   transform: translateY(-1px);
 }
 
-/* ---------- isobar backdrop (weather-chart linework) ---------- */
+/* ---------- isobars ---------- */
 .isobars {
   position: absolute;
   inset: 0;
@@ -266,52 +317,72 @@ h2 {
 .hero {
   position: relative;
   overflow: hidden;
-  padding: clamp(8rem, 16vw, 12rem) 0 0;
+  padding: clamp(8.5rem, 16vw, 12rem) 0 0;
 }
 .hero > .container {
   position: relative;
 }
 .hero-inner {
   display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
+  grid-template-columns: 1.12fr 0.88fr;
   align-items: center;
   gap: clamp(2rem, 6vw, 5rem);
 }
 .hero-name {
-  font-size: clamp(2.9rem, 8.6vw, 6.6rem);
-  line-height: 0.94;
-  letter-spacing: -0.045em;
-  margin-top: 1.1rem;
+  display: grid;
+  gap: 0.35rem;
+  margin: 1.2rem 0 clamp(1.8rem, 4vw, 3rem);
+}
+.hn-first {
+  font-size: clamp(1rem, 2.4vw, 1.85rem);
+  font-weight: 600;
+  font-stretch: 125%;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink-2);
+  line-height: 1;
+}
+.hn-last {
+  font-size: clamp(2.6rem, 15vw, 13.5rem);
+  font-weight: 900;
+  font-stretch: 100%;
+  letter-spacing: -0.042em;
+  line-height: 0.84;
+  text-transform: uppercase;
+  display: block;
 }
 .hero-tag {
-  margin-top: 1.1rem;
-  font-size: clamp(1.15rem, 2.2vw, 1.7rem);
+  margin-top: 1.2rem;
+  font-size: clamp(1.1rem, 2vw, 1.55rem);
   font-weight: 500;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.015em;
   color: var(--ink-2);
 }
-.hero-tag span {
+.hero-tag b {
   color: var(--gold-ink);
   font-weight: 700;
 }
 .hero .lead {
-  margin-top: 1.6rem;
+  margin-top: 1.5rem;
 }
 .actions {
   display: flex;
   flex-wrap: wrap;
   gap: 0.7rem;
-  margin-top: 2.2rem;
+  margin-top: 2.1rem;
 }
 .hero-art {
   position: relative;
   display: grid;
   place-items: center;
   aspect-ratio: 1;
+  max-width: 420px;
+  justify-self: end;
+  width: 100%;
 }
 .hero-art img {
   position: relative;
-  width: 92%;
+  width: 94%;
 }
 .hero-disc {
   position: absolute;
@@ -344,7 +415,7 @@ h2 {
   background: var(--green);
 }
 
-/* ---------- section scaffold ---------- */
+/* ---------- sections ---------- */
 .section {
   padding: var(--pad-y) 0;
 }
@@ -352,11 +423,81 @@ h2 {
   display: grid;
   gap: 0.9rem;
   margin-bottom: clamp(2.5rem, 5vw, 3.8rem);
-  max-width: 46rem;
+  max-width: 44rem;
 }
 .sec-head .eyebrow,
 .sec-head .sec-bar {
   justify-self: start;
+}
+
+/* ---------- why there is a bear ---------- */
+.bear {
+  background: var(--paper-2);
+  position: relative;
+  overflow: hidden;
+}
+.bear > .container {
+  position: relative;
+}
+.bear-grid {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: clamp(2.5rem, 6vw, 5rem);
+  align-items: center;
+}
+.paths {
+  list-style: none;
+  display: grid;
+  gap: 1px;
+  background: var(--hair);
+  border-block: 1px solid var(--hair);
+}
+.paths li {
+  background: var(--paper-2);
+  padding: 1.3rem 1.4rem;
+  display: grid;
+  grid-template-columns: 34px 1fr;
+  align-items: start;
+  gap: 1rem;
+  transition: background 0.2s ease;
+}
+.paths li:hover {
+  background: var(--paper);
+}
+.path-shape {
+  width: 26px;
+  height: 26px;
+  margin-top: 0.3rem;
+}
+.path-shape.tri {
+  background: var(--gold);
+  clip-path: polygon(50% 0, 100% 100%, 0 100%);
+}
+.path-shape.sq {
+  background: var(--red);
+}
+.path-shape.ci {
+  background: var(--blue);
+  border-radius: 50%;
+}
+.paths b {
+  display: block;
+  font-size: 1.08rem;
+  font-weight: 700;
+  font-stretch: 112%;
+  letter-spacing: -0.02em;
+}
+.paths span {
+  font-size: 0.92rem;
+  color: var(--ink-2);
+}
+.paths-note {
+  margin-top: 1.2rem;
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-3);
 }
 
 /* ---------- about ---------- */
@@ -412,9 +553,10 @@ h2 {
   background: var(--paper-2);
 }
 .card h3 {
-  font-size: 1.18rem;
-  letter-spacing: -0.025em;
-  line-height: 1.24;
+  font-size: 1.16rem;
+  font-stretch: 110%;
+  letter-spacing: -0.02em;
+  line-height: 1.26;
 }
 .card p {
   font-size: 0.95rem;
@@ -425,6 +567,7 @@ h2 {
   margin-top: auto;
   padding-top: 0.5rem;
   align-self: start;
+  justify-self: start;
   font-size: 0.85rem;
   font-weight: 600;
   color: var(--accent-ink);
@@ -443,9 +586,10 @@ h2 {
   padding: clamp(5.5rem, 12vw, 9rem) 0;
 }
 .statement blockquote {
-  font-size: clamp(1.5rem, 3.6vw, 2.9rem);
+  font-size: clamp(1.5rem, 3.5vw, 2.8rem);
   font-weight: 700;
-  letter-spacing: -0.035em;
+  font-stretch: 112%;
+  letter-spacing: -0.028em;
   line-height: 1.16;
   max-width: 22ch;
   text-wrap: balance;
@@ -486,8 +630,9 @@ h2 {
   color: var(--red);
 }
 .edu h3 {
-  font-size: 1.05rem;
-  letter-spacing: -0.02em;
+  font-size: 1.03rem;
+  font-stretch: 108%;
+  letter-spacing: -0.018em;
   line-height: 1.3;
 }
 .edu p {
@@ -496,7 +641,7 @@ h2 {
   color: var(--ink-2);
 }
 
-/* ---------- experience (deep blue ground) ---------- */
+/* ---------- experience ---------- */
 .experience {
   --accent: #7fa3c7;
   --accent-ink: #9db8d2;
@@ -532,8 +677,9 @@ h2 {
   color: #9db8d2;
 }
 .t-item h3 {
-  font-size: 1.12rem;
-  letter-spacing: -0.022em;
+  font-size: 1.1rem;
+  font-stretch: 110%;
+  letter-spacing: -0.02em;
   line-height: 1.3;
 }
 .t-org {
@@ -562,6 +708,7 @@ h2 {
   font-family: var(--mono);
   font-size: 0.68rem;
   font-weight: 500;
+  font-stretch: 100%;
   letter-spacing: 0.16em;
   text-transform: uppercase;
   color: var(--ink-3);
@@ -582,7 +729,8 @@ h2 {
 .rows b {
   font-size: 0.98rem;
   font-weight: 700;
-  letter-spacing: -0.018em;
+  font-stretch: 108%;
+  letter-spacing: -0.015em;
   line-height: 1.35;
 }
 .rows .meta {
@@ -631,9 +779,10 @@ h2 {
   color: var(--ink-3);
 }
 .post-card h3 {
-  font-size: 1.1rem;
-  letter-spacing: -0.024em;
-  line-height: 1.28;
+  font-size: 1.08rem;
+  font-stretch: 110%;
+  letter-spacing: -0.02em;
+  line-height: 1.3;
 }
 .post-card p {
   font-size: 0.93rem;
@@ -648,7 +797,7 @@ h2 {
   color: var(--green);
 }
 
-/* ---------- lineage / colophon ---------- */
+/* ---------- colophon ---------- */
 .lineage {
   position: relative;
   overflow: hidden;
@@ -697,7 +846,8 @@ h2 {
 }
 .swatch b {
   font-size: 1rem;
-  letter-spacing: -0.02em;
+  font-stretch: 108%;
+  letter-spacing: -0.015em;
 }
 .swatch p {
   font-size: 0.86rem;
@@ -707,9 +857,11 @@ h2 {
 .tree-wrap {
   margin-top: clamp(2.5rem, 5vw, 4rem);
   overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior-x: contain;
 }
 .tree {
-  min-width: 780px;
+  min-width: 880px;
   width: 100%;
   height: auto;
 }
@@ -717,26 +869,34 @@ h2 {
   font-family: var(--mono);
   font-size: 13px;
   fill: var(--ink-2);
-  letter-spacing: 0.02em;
 }
 .tree .node {
   fill: var(--ink);
   font-weight: 500;
 }
-.tree line,
-.tree path {
+.tree line {
   stroke: var(--hair-2);
   stroke-width: 1.25;
   fill: none;
+}
+.tree-hint {
+  display: none;
+  margin-top: 0.75rem;
+  font-family: var(--mono);
+  font-size: 0.64rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-3);
 }
 
 /* ---------- contact ---------- */
 .contact .big-link {
   display: inline-block;
   margin-top: 0.6rem;
-  font-size: clamp(1.5rem, 4.6vw, 3.2rem);
+  font-size: clamp(1.5rem, 4.4vw, 3rem);
   font-weight: 800;
-  letter-spacing: -0.04em;
+  font-stretch: 112%;
+  letter-spacing: -0.03em;
   color: var(--ink);
   text-decoration: none;
   border-bottom: 3px solid var(--gold);
@@ -803,13 +963,14 @@ footer a:hover {
   border-radius: 50%;
 }
 
-/* ---------- blog index + article ---------- */
+/* ---------- writing index + article ---------- */
 .page-head {
-  padding: clamp(8rem, 15vw, 11rem) 0 clamp(2.5rem, 5vw, 4rem);
+  padding: clamp(8.5rem, 15vw, 11rem) 0 clamp(2.5rem, 5vw, 4rem);
 }
 .page-head h1 {
   font-size: clamp(2.2rem, 6vw, 4rem);
-  letter-spacing: -0.04em;
+  font-stretch: 118%;
+  letter-spacing: -0.032em;
   margin-top: 1rem;
   max-width: 18ch;
 }
@@ -818,7 +979,7 @@ footer a:hover {
   max-width: 50ch;
 }
 .post-hero {
-  padding: clamp(8rem, 15vw, 11rem) 0 clamp(2rem, 4vw, 3rem);
+  padding: clamp(8.5rem, 15vw, 11rem) 0 clamp(2rem, 4vw, 3rem);
 }
 .post-hero .container {
   max-width: 46rem;
@@ -831,8 +992,9 @@ footer a:hover {
   color: var(--ink-3);
 }
 .post-hero h1 {
-  font-size: clamp(2rem, 5vw, 3.4rem);
-  letter-spacing: -0.04em;
+  font-size: clamp(2rem, 4.8vw, 3.2rem);
+  font-stretch: 116%;
+  letter-spacing: -0.032em;
   margin-top: 0.9rem;
 }
 .post-dek {
@@ -853,8 +1015,9 @@ footer a:hover {
   margin-bottom: 1.3rem;
 }
 .post-body h2 {
-  font-size: clamp(1.3rem, 2.4vw, 1.7rem);
-  letter-spacing: -0.03em;
+  font-size: clamp(1.3rem, 2.4vw, 1.65rem);
+  font-stretch: 112%;
+  letter-spacing: -0.025em;
   margin: 2.6rem 0 1rem;
 }
 .post-body blockquote {
@@ -863,7 +1026,7 @@ footer a:hover {
   border-left: 3px solid var(--gold);
   font-size: 1.15rem;
   font-weight: 500;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.015em;
   line-height: 1.45;
   color: var(--ink);
 }
@@ -927,7 +1090,8 @@ footer a:hover {
   .hero-inner,
   .about-grid,
   .rec-grid,
-  .lineage-grid {
+  .lineage-grid,
+  .bear-grid {
     grid-template-columns: 1fr;
   }
   .hero-art {
@@ -941,8 +1105,8 @@ footer a:hover {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 38px;
-    height: 34px;
+    width: 40px;
+    height: 36px;
     background: none;
     border: 1px solid var(--hair-2);
     color: var(--ink);
@@ -964,11 +1128,134 @@ footer a:hover {
     display: flex;
   }
   .site-nav ul a {
-    padding: 0.8rem 0;
+    padding: 0.85rem 0;
     border-bottom: 1px solid var(--hair);
     font-size: 0.95rem;
   }
 }
+
+/* ---------- phones ---------- */
+@media (max-width: 620px) {
+  :root {
+    --pad-y: clamp(3.5rem, 12vw, 5rem);
+    --nav-h: 58px;
+  }
+  body {
+    font-size: 1rem;
+  }
+  .site-nav {
+    padding: 0.7rem 1.15rem;
+  }
+  .nav-bear {
+    width: 32px;
+  }
+  .walk {
+    height: 20px;
+  }
+  .walk-bear {
+    width: 24px;
+  }
+  .hero {
+    padding-top: 6.5rem;
+  }
+  .hero-inner {
+    gap: 1.75rem;
+  }
+  .hero-art {
+    max-width: 210px;
+    aspect-ratio: auto;
+    padding: 1.4rem 0;
+  }
+  .hero-name {
+    font-size: clamp(2.5rem, 13vw, 3.6rem);
+    font-stretch: 112%;
+    letter-spacing: -0.03em;
+  }
+  .origins {
+    font-size: 0.63rem;
+    letter-spacing: 0.1em;
+    gap: 0.3rem 0.9rem;
+  }
+  .hero-tag {
+    font-size: 1.15rem;
+  }
+  .spectrum {
+    margin-top: 2.75rem;
+  }
+  .actions {
+    gap: 0.6rem;
+  }
+  .actions .btn {
+    flex: 1 1 10rem;
+    justify-content: center;
+    padding: 0.85rem 1rem;
+  }
+  .sec-head {
+    margin-bottom: 2rem;
+  }
+  h2 {
+    font-size: clamp(1.6rem, 7.5vw, 2.1rem);
+    font-stretch: 108%;
+  }
+  .card,
+  .post-card,
+  .swatch,
+  .paths li {
+    padding: 1.35rem 1.15rem;
+  }
+  .swatches {
+    grid-template-columns: 1fr 1fr;
+  }
+  .swatch:last-child {
+    grid-column: 1 / -1;
+  }
+  .chip {
+    height: 68px;
+  }
+  .chip svg {
+    width: 34px;
+    height: 34px;
+  }
+  .statement blockquote {
+    font-size: clamp(1.35rem, 7.5vw, 1.9rem);
+    max-width: none;
+  }
+  .timeline {
+    padding-left: 1.25rem;
+  }
+  .tree {
+    min-width: 700px;
+  }
+  .tree text {
+    font-size: 15px;
+  }
+  .tree-hint {
+    display: block;
+  }
+  .contact .big-link {
+    font-size: clamp(1.1rem, 6.4vw, 1.7rem);
+    overflow-wrap: anywhere;
+    border-bottom-width: 2px;
+  }
+  .links {
+    gap: 0.9rem 1.3rem;
+    margin-top: 2rem;
+  }
+  footer .container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.85rem;
+  }
+  .post-body blockquote {
+    padding-left: 1rem;
+  }
+}
+@media (max-width: 380px) {
+  .swatches {
+    grid-template-columns: 1fr;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
